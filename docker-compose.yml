@@ -104,16 +104,19 @@ services:
       - "80"
   lldp01-local:
     image: indigo/docker-lldp
-    privileged: true
     networks:
       local:
         ipv4_address: 172.30.0.35
   lldp02-local:
     image: indigo/docker-lldp
-    privileged: true
     networks:
       local:
         ipv4_address: 172.30.0.36
+  lldp03-local:
+    image: indigo/docker-lldp
+    networks:
+      local:
+        ipv4_address: 172.30.0.37
   linux01-branch:
     image: indigo/docker-netsnmp
     networks:
@@ -137,13 +140,11 @@ services:
       - "80"
   lldp01-branch:
     image: indigo/docker-lldp
-    privileged: true
     networks:
       branch:
         ipv4_address: 172.31.0.35
   lldp02-branch:
     image: indigo/docker-lldp
-    privileged: true
     networks:
       branch:
         ipv4_address: 172.31.0.36

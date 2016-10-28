@@ -1,0 +1,149 @@
+version: '2'
+networks:
+  local:
+      driver: bridge
+      ipam:
+        config:
+          - subnet: 172.30.0.0/16
+  branch:
+      driver: bridge
+      ipam:
+        config:
+          - subnet: 172.31.0.0/16
+services:
+  database_data:
+    image: tianon/true
+    volumes:
+        - /var/lib/postgresql/data
+  database:
+    image: postgres:9.5
+    networks:
+      local:
+        ipv4_address: 172.30.0.10
+    env_file:
+      - .postgres.env
+    ports:
+      - "5432:5432"
+    depends_on:
+      - database_data
+    volumes_from:
+      - database_data:rw
+  opennms_data:
+    image: tianon/true
+    volumes:
+        - /opennms-data
+        - /Users/indigo/Desktop/oscon/opennms-etc:/opt/opennms/etc
+  opennms:
+    image: indigo/docker-opennms:latest
+    networks:
+      local:
+        ipv4_address: 172.30.0.11
+    env_file:
+      - .opennms.env
+      - .postgres.env
+    depends_on:
+      - database
+      - opennms_data
+    volumes_from:
+      - opennms_data:rw
+    command: ["-f"]
+    ports:
+      - "8980:8980"
+      - "18980:18980"
+      - "1099:1099"
+      - "8101:8101"
+      - "61616:61616"
+      - "5817:5817"
+      - "162:162/udp"
+  grafana:
+    image: grafana/grafana:3.1.1
+    networks:
+      local:
+        ipv4_address: 172.30.0.9
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .grafana.env
+    ports:
+      - "3000:3000"
+  minion-branch:
+    image: indigo/docker-minion:latest
+    networks:
+      local:
+        ipv4_address: 172.30.0.12
+      branch:
+        ipv4_address: 172.31.0.12
+    env_file:
+      - .minion.env
+    command: ["-f"]
+    ports:
+      - "8201:8201"
+      - "18980"
+      - "162/udp"
+      - "514/udp"
+  linux01-local:
+    image: indigo/docker-netsnmp
+    networks:
+      local:
+        ipv4_address: 172.30.0.32
+    ports:
+      - "161/udp"
+  linux02-local:
+    image: indigo/docker-netsnmp
+    networks:
+      local:
+        ipv4_address: 172.30.0.33
+    ports:
+      - "161/udp"
+  http-local:
+    image: httpd
+    networks:
+      local:
+        ipv4_address: 172.30.0.34
+    ports:
+      - "80"
+  lldp01-local:
+    image: indigo/docker-lldp
+    privileged: true
+    networks:
+      local:
+        ipv4_address: 172.30.0.35
+  lldp02-local:
+    image: indigo/docker-lldp
+    privileged: true
+    networks:
+      local:
+        ipv4_address: 172.30.0.36
+  linux01-branch:
+    image: indigo/docker-netsnmp
+    networks:
+      branch:
+        ipv4_address: 172.31.0.32
+    ports:
+      - "161/udp"
+  linux02-branch:
+    image: indigo/docker-netsnmp
+    networks:
+      branch:
+        ipv4_address: 172.31.0.33
+    ports:
+      - "161/udp"
+  http-branch:
+    image: httpd
+    networks:
+      branch:
+        ipv4_address: 172.31.0.34
+    ports:
+      - "80"
+  lldp01-branch:
+    image: indigo/docker-lldp
+    privileged: true
+    networks:
+      branch:
+        ipv4_address: 172.31.0.35
+  lldp02-branch:
+    image: indigo/docker-lldp
+    privileged: true
+    networks:
+      branch:
+        ipv4_address: 172.31.0.36

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foreign-source xmlns="http://xmlns.opennms.org/xsd/config/foreign-source" name="demo-environment" date-stamp="2016-10-28T10:40:43.995Z">
+  <scan-interval>1d</scan-interval>
+  <detectors/>
+  <policies/>
+</foreign-source>

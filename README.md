@@ -1,6 +1,22 @@
 # opennms-demo
 OpenNMS demo environment with Docker and Docker Compose
 
+# Usage
+
+Please adjust the directory for the [opennms/etc](https://github.com/indigo423/opennms-demo/blob/master/docker-compose.yml#L35) directory directory in the opennms-data container.
+
+    /Users/indigo/Desktop/oscon/opennms-etc:/opt/opennms/etc
+    
+HINT: The directory will be created in case it does not exist and will be initialized with a pristine _OpenNMS_ configuration.
+
+Initialize the environment.
+
+    git clone https://github.com/indigo423/opennms-demo.git
+    cd opennms-demo
+    docker-compose up -d
+
+HINT: By default OpenNMS will use a automatically created daily snapshot of _OpenNMS_ and the tagged versions from [DockerHub](https://hub.docker.com/r/indigo/docker-opennms/) can be used in the `docker-compose.yml` file.
+
 # Enabling LLDP
 
 Forwarding _LLDPDU_ is not enabled by default on Linux _bridges_.

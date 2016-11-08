@@ -1,5 +1,5 @@
 #!/bin/bash
-OPENNMS_HOST=docker
+OPENNMS_HOST=192.168.99.100
 OPENNMS_USER=admin
 OPENNMS_PASS=admin
 

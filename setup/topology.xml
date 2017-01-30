@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+    <key id="breadcrumb-strategy" for="graphml" attr.name="breadcrumb-strategy" attr.type="string"/>
+    <key id="label" for="all" attr.name="label" attr.type="string"></key>
+    <key id="description" for="graph" attr.name="description" attr.type="string"></key>
+    <key id="namespace" for="graph" attr.name="namespace" attr.type="string"></key>
+    <key id="focus-strategy" for="graph" attr.name="focus-strategy" attr.type="string"></key>
+    <key id="focus-ids" for="graph" attr.name="focus-ids" attr.type="string"></key>
+    <key id="foreignSource" for="node" attr.name="foreignSource" attr.type="string"></key>
+    <key id="foreignID" for="node" attr.name="foreignID" attr.type="string"></key>
+    <key id="preferred-layout" for="graph" attr.name="preferred-layout" attr.type="string"></key>
+    <key id="vertex-status-provider" for="graph" attr.name="vertex-status-provider" attr.type="boolean"></key>
+    <key id="iconKey" for="node" attr.name="iconKey" attr.type="string"></key>
+    <key id="semantic-zoom-level" for="graph" attr.name="semantic-zoom-level" attr.type="int"/>
+    <data key="label">FOSDEM 2017</data>
+    <data key="breadcrumb-strategy">NONE</data>
+
+    <graph id="topology" edgedefault="undirected">
+        <data key="namespace">fosdem</data>
+        <data key="focus-strategy">ALL</data>
+        <data key="vertex-status-provider">true</data>
+
+        <!-- NOC -->
+        <node id="opennms">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">opennms</data>
+            <data key="foreignID">opennms</data>
+            <data key="iconKey">opennms_server</data>
+        </node>
+        <node id="grafana">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">grafana</data>
+            <data key="foreignID">grafana</data>
+        </node>
+        <node id="linux01-local">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">linux01-local</data>
+            <data key="foreignID">linux01-local</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="linux02-local">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">linux02-local</data>
+            <data key="foreignID">linux02-local</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="http-local">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">http-local</data>
+            <data key="foreignID">http-local</data>
+            <data key="iconKey">server</data>
+        </node>
+        <node id="lldp01-local">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">lldp01-local</data>
+            <data key="foreignID">lldp01-local</data>
+            <data key="iconKey">database</data>
+        </node>
+        <node id="lldp02-local">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">lldp02-local</data>
+            <data key="foreignID">lldp02-local</data>
+            <data key="iconKey">database</data>
+        </node>
+        <node id="lldp03-local">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">lldp03-local</data>
+            <data key="foreignID">lldp03-local</data>
+            <data key="iconKey">database</data>
+        </node>
+        <edge id="opennms-noc-network" source="opennms" target="noc-network"/>
+        <edge id="grafana-noc-network" source="grafana" target="noc-network"/>
+        <edge id="linux01-local-noc-network" source="linux01-local" target="noc-network"/>
+        <edge id="linux02-local-noc-network" source="linux02-local" target="noc-network"/>
+        <edge id="http-local-noc-network" source="http-local" target="noc-network"/>
+        <edge id="lldp01-local-noc-network" source="lldp01-local" target="noc-network"/>
+        <edge id="lldp02-local-noc-network" source="lldp02-local" target="noc-network"/>
+        <edge id="lldp03-local-noc-network" source="lldp03-local" target="noc-network"/>
+
+        <!-- Networks -->
+        <node id="noc-network">
+            <data key="label">172.30.0.0/24</data>
+            <data key="iconKey">vmware-network</data>
+        </node>
+        <node id="branch-network">
+            <data key="label">172.31.0.0/24</data>
+            <data key="iconKey">vmware-network</data>
+        </node>
+
+        <!-- Branch -->
+        <node id="minion-branch">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">minion-branch</data>
+            <data key="foreignID">minion-branch</data>
+        </node>
+        <node id="linux01-branch">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">linux01-branch</data>
+            <data key="foreignID">linux01-branch</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="linux02-branch">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">linux02-branch</data>
+            <data key="foreignID">linux02-branch</data>
+            <data key="iconKey">linux_file_server</data>
+        </node>
+        <node id="http-branch">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">http-branch</data>
+            <data key="foreignID">http-branch</data>
+            <data key="iconKey">server</data>
+        </node>
+        <node id="lldp01-branch">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">lldp01-branch</data>
+            <data key="foreignID">lldp01-branch</data>
+            <data key="iconKey">database</data>
+        </node>
+        <node id="lldp02-branch">
+            <data key="foreignSource">demo-environment</data>
+            <data key="label">lldp02-branch</data>
+            <data key="foreignID">lldp02-branch</data>
+            <data key="iconKey">database</data>
+        </node>
+        <edge id="minon-branch-branch-network" source="minion-branch" target="branch-network"/>
+        <edge id="minon-branch-noc-network" source="minion-branch" target="noc-network"/>
+        <edge id="linux01-branch-branch-network" source="linux01-branch" target="branch-network"/>
+        <edge id="linux02-branch-branch-network" source="linux02-branch" target="branch-network"/>
+        <edge id="http-branch-branch-network" source="http-branch" target="branch-network"/>
+        <edge id="lldp01-branch-branch-network" source="lldp01-branch" target="branch-network"/>
+        <edge id="lldp02-branch-branch-network" source="lldp02-branch" target="branch-network"/>
+    </graph>
+</graphml>

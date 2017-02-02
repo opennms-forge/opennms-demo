@@ -18,7 +18,7 @@ services:
   database:
     image: postgres:9.6.1
     networks:
-      local:
+      net-stuttgart:
         ipv4_address: 172.30.0.10
     env_file:
       - .postgres.env
@@ -33,9 +33,9 @@ services:
     volumes:
         - /opennms-data
   opennms:
-    image: indigo/docker-opennms:latest
+    image: opennms/horizon-core-web:rc-19.0.0
     networks:
-      local:
+      net-stuttgart:
         ipv4_address: 172.30.0.11
     env_file:
       - .opennms.env
@@ -68,7 +68,7 @@ services:
     ports:
       - "3000:3000"
   minion-stuttgart-01:
-    image: opennms/minion:latest
+    image: opennms/minion:rc-19.0.0
     networks:
       net-stuttgart:
         ipv4_address: 172.30.0.12
@@ -120,7 +120,7 @@ services:
   web01-fulda-01:
     image: httpd
     networks:
-      branch:
+      net-fulda:
         ipv4_address: 172.31.0.34
     ports:
       - "80"

@@ -16,7 +16,7 @@ services:
     volumes:
         - /var/lib/postgresql/data
   database:
-    image: postgres:9.5
+    image: postgres:9.6.1
     networks:
       local:
         ipv4_address: 172.30.0.10

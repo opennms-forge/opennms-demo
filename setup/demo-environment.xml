@@ -18,90 +18,49 @@
     </interface>
   </node>
 
-  <node location="Default" foreign-id="kibana" node-label="kibana">
-    <interface ip-addr="172.30.0.14" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-    </interface>
-  </node>
-
-  <node location="Default" foreign-id="elastic-01" node-label="elastic-01">
-    <interface ip-addr="172.30.0.15" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-    </interface>
-  </node>
-
-  <node location="Default" foreign-id="linux01-local" node-label="linux01-local">
+  <node location="Default" foreign-id="srv-stuttgart-01" node-label="srv-stuttgart-01">
     <interface ip-addr="172.30.0.32" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
       <monitored-service service-name="SNMP"/>
     </interface>
   </node>
 
-  <node location="Default" foreign-id="linux02-local" node-label="linux02-local">
+  <node location="Default" foreign-id="srv-stuttgart-02" node-label="srv-stuttgart-02">
     <interface ip-addr="172.30.0.33" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
       <monitored-service service-name="SNMP"/>
     </interface>
   </node>
 
-  <node location="Default" foreign-id="http-local" node-label="http-local">
+  <node location="Default" foreign-id="web-stuttgart-01" node-label="web-stuttgart-01">
     <interface ip-addr="172.30.0.34" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
     </interface>
   </node>
 
-  <node location="Default" foreign-id="lldp01-local" node-label="lldp01-local">
-    <interface ip-addr="172.30.0.35" status="1" snmp-primary="P">
+  <node location="Fulda" foreign-id="minion-fulda-01" node-label="minion-fulda-01">
+    <interface ip-addr="172.31.0.12" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
-      <monitored-service service-name="SNMP"/>
     </interface>
   </node>
 
-  <node location="Default" foreign-id="lldp02-local" node-label="lldp02-local">
-    <interface ip-addr="172.30.0.36" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-      <monitored-service service-name="SNMP"/>
-    </interface>
-  </node>
-
-  <node location="Default" foreign-id="lldp03-local" node-label="lldp03-local">
-    <interface ip-addr="172.30.0.37" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-      <monitored-service service-name="SNMP"/>
-    </interface>
-  </node>
-
-  <node location="branch" foreign-id="linux01-branch" node-label="linux01-branch">
+  <node location="Fulda" foreign-id="srv-fulda-01" node-label="srv-fulda-01">
     <interface ip-addr="172.31.0.32" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
       <monitored-service service-name="SNMP"/>
     </interface>
   </node>
 
-  <node location="branch" foreign-id="linux02-branch" node-label="linux02-branch">
+  <node location="Fulda" foreign-id="srv-fulda-02" node-label="srv-fulda-02">
     <interface ip-addr="172.31.0.33" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
       <monitored-service service-name="SNMP"/>
     </interface>
   </node>
 
-  <node location="branch" foreign-id="http-branch" node-label="http-branch">
+  <node location="Fulda" foreign-id="web-fulda-01" node-label="web-fulda-01">
     <interface ip-addr="172.31.0.34" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
-    </interface>
-  </node>
-
-  <node location="branch" foreign-id="lldp01-branch" node-label="lldp01-branch">
-    <interface ip-addr="172.31.0.35" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-      <monitored-service service-name="SNMP"/>
-    </interface>
-  </node>
-
-  <node location="branch" foreign-id="lldp02-branch" node-label="lldp02-branch">
-    <interface ip-addr="172.31.0.36" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-      <monitored-service service-name="SNMP"/>
     </interface>
   </node>
 </model-import>

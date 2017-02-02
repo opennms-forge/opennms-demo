@@ -67,7 +67,7 @@ services:
       - .grafana.env
     ports:
       - "3000:3000"
-  minion-stuttgart-01:
+  minion-fulda-01:
     image: opennms/minion:rc-19.0.0
     networks:
       net-stuttgart:
@@ -75,7 +75,7 @@ services:
       net-fulda:
         ipv4_address: 172.31.0.12
     env_file:
-      - .minion-stuttgart-01.env
+      - .minion-fulda-01.env
     command: ["-f"]
     ports:
       - "8201:8201"
@@ -96,7 +96,7 @@ services:
         ipv4_address: 172.30.0.33
     ports:
       - "161/udp"
-  web01-stuttgart-01:
+  web-stuttgart-01:
     image: httpd
     networks:
       net-stuttgart:
@@ -117,7 +117,7 @@ services:
         ipv4_address: 172.31.0.33
     ports:
       - "161/udp"
-  web01-fulda-01:
+  web-fulda-01:
     image: httpd
     networks:
       net-fulda:

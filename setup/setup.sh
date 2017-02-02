@@ -1,5 +1,5 @@
 #!/bin/bash
-OPENNMS_HOST=192.168.99.100
+OPENNMS_HOST=localhost
 OPENNMS_USER=admin
 OPENNMS_PASS=admin
 

@@ -32,7 +32,7 @@ services:
     image: tianon/true
     volumes:
         - /opennms-data
-        - /Users/indigo/Desktop/oscon/opennms-etc:/opt/opennms/etc
+        - ./opennms-etc:/opt/opennms/etc
   opennms:
     image: indigo/docker-opennms:latest
     networks:
@@ -46,7 +46,7 @@ services:
       - opennms_data
     volumes_from:
       - opennms_data:rw
-    command: ["-f"]
+    command: ["-s"]
     ports:
       - "8980:8980"
       - "18980:18980"
@@ -55,18 +55,7 @@ services:
       - "61616:61616"
       - "5817:5817"
       - "162:162/udp"
-  grafana:
-    image: grafana/grafana:3.1.1
-    networks:
-      local:
-        ipv4_address: 172.30.0.9
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-    env_file:
-      - .grafana.env
-    ports:
-      - "3000:3000"
-  minion-branch:
+  minion-branch-1:
     image: indigo/docker-minion:latest
     networks:
       local:
@@ -74,13 +63,28 @@ services:
       branch:
         ipv4_address: 172.31.0.12
     env_file:
-      - .minion.env
+      - .minion1.env
     command: ["-f"]
     ports:
       - "8201:8201"
       - "18980"
       - "162/udp"
       - "514/udp"
+#  minion-branch-2:
+#    image: indigo/docker-minion:latest
+#    networks:
+#      local:
+#        ipv4_address: 172.30.0.13
+#      branch:
+#        ipv4_address: 172.31.0.13
+#    env_file:
+#      - .minion2.env
+#    command: ["-f"]
+#    ports:
+#      - "8301:8201"
+#      - "18981:18980"
+#      - "1162:162/udp"
+#      - "1514:514/udp"
   linux01-local:
     image: indigo/docker-netsnmp
     networks:
@@ -102,21 +106,21 @@ services:
         ipv4_address: 172.30.0.34
     ports:
       - "80"
-  lldp01-local:
-    image: indigo/docker-lldp
-    networks:
-      local:
-        ipv4_address: 172.30.0.35
-  lldp02-local:
-    image: indigo/docker-lldp
-    networks:
-      local:
-        ipv4_address: 172.30.0.36
-  lldp03-local:
-    image: indigo/docker-lldp
-    networks:
-      local:
-        ipv4_address: 172.30.0.37
+#  lldp01-local:
+#    image: indigo/docker-lldp
+#    networks:
+#      local:
+#        ipv4_address: 172.30.0.35
+#  lldp02-local:
+#    image: indigo/docker-lldp
+#    networks:
+#      local:
+#        ipv4_address: 172.30.0.36
+#  lldp03-local:
+#    image: indigo/docker-lldp
+#    networks:
+#      local:
+#        ipv4_address: 172.30.0.37
   linux01-branch:
     image: indigo/docker-netsnmp
     networks:
@@ -138,13 +142,41 @@ services:
         ipv4_address: 172.31.0.34
     ports:
       - "80"
-  lldp01-branch:
-    image: indigo/docker-lldp
+#  lldp01-branch:
+#    image: indigo/docker-lldp
+#    networks:
+#      branch:
+#        ipv4_address: 172.31.0.35
+#  lldp02-branch:
+#    image: indigo/docker-lldp
+#    networks:
+#      branch:
+#        ipv4_address: 172.31.0.36
+  grafana:
+    image: grafana/grafana:3.1.1
     networks:
-      branch:
-        ipv4_address: 172.31.0.35
-  lldp02-branch:
-    image: indigo/docker-lldp
+      local:
+        ipv4_address: 172.30.0.9
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .grafana.env
+    ports:
+      - "3000:3000"
+  kibana:
+    image: kibana:4.6.1
     networks:
-      branch:
-        ipv4_address: 172.31.0.36
+      local:
+        ipv4_address: 172.30.0.14
+    env_file:
+      - .kibana.env
+    ports:
+      - "5601:5601"
+  elastic-01:
+    image: elasticsearch:2.4.2
+    networks:
+      local:
+        ipv4_address: 172.30.0.15
+    ports:
+      - "9200:9200"
+      - "9300:9300"

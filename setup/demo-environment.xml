@@ -18,6 +18,18 @@
     </interface>
   </node>
 
+  <node location="Default" foreign-id="kibana" node-label="kibana">
+    <interface ip-addr="172.30.0.14" status="1" snmp-primary="P">
+      <monitored-service service-name="ICMP"/>
+    </interface>
+  </node>
+
+  <node location="Default" foreign-id="elastic-01" node-label="elastic-01">
+    <interface ip-addr="172.30.0.15" status="1" snmp-primary="P">
+      <monitored-service service-name="ICMP"/>
+    </interface>
+  </node>
+
   <node location="Default" foreign-id="linux01-local" node-label="linux01-local">
     <interface ip-addr="172.30.0.32" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
@@ -56,15 +68,6 @@
     <interface ip-addr="172.30.0.37" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
       <monitored-service service-name="SNMP"/>
-    </interface>
-  </node>
-
-  <node location="branch" foreign-id="minion-branch" node-label="minion-branch">
-    <interface ip-addr="172.30.0.12" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-    </interface>
-    <interface ip-addr="172.31.0.12" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
     </interface>
   </node>
 

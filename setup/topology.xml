@@ -28,7 +28,7 @@
             <data key="foreignSource">demo-environment</data>
             <data key="label">database</data>
             <data key="foreignID">database</data>
-            <data key="iconKey">database_server</data>
+            <data key="iconKey">database</data>
         </node>
         <node id="opennms">
             <data key="foreignSource">demo-environment</data>
@@ -61,9 +61,10 @@
         </node>
         <edge id="opennms-net-stuttgart" source="opennms" target="net-stuttgart"/>
         <edge id="grafana-net-stuttgart" source="grafana" target="net-stuttgart"/>
-        <edge id="linux01-local-net-stuttgart" source="linux01-local" target="net-stuttgart"/>
-        <edge id="linux02-local-net-stuttgart" source="linux02-local" target="net-stuttgart"/>
-        <edge id="http-local-net-stuttgart" source="http-local" target="net-stuttgart"/>
+        <edge id="database-net-stuttgart" source="database" target="net-stuttgart"/>
+        <edge id="srv-stuttgart-01-net-stuttgart" source="srv-stuttgart-01" target="net-stuttgart"/>
+        <edge id="srv-stuttgart-02-net-stuttgart" source="srv-stuttgart-02" target="net-stuttgart"/>
+        <edge id="web-stuttgart-01-net-stuttgart" source="web-stuttgart-01" target="net-stuttgart"/>
 
         <!-- Networks -->
         <node id="net-stuttgart">

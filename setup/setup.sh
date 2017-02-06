@@ -25,7 +25,7 @@ curl -v -u ${OPENNMS_USER}:${OPENNMS_PASS} \
 curl -v -u ${OPENNMS_USER}:${OPENNMS_PASS} \
     -X DELETE \
     http://${OPENNMS_HOST}:8980/opennms/rest/graphml/fosdem2017
-sleep 5
+#sleep 5
 curl -v -u ${OPENNMS_USER}:${OPENNMS_PASS} \
     -X POST \
     -H "Content-Type: application/xml" \

@@ -1,0 +1,11 @@
+--- opennms-activemq.xml	2017-07-11 11:16:58.000000000 -0400
++++ opennms-activemq.xml.new	2017-07-11 11:17:34.000000000 -0400
+@@ -167,7 +167,7 @@
+               WARNING: Access to port 61616 should be firewalled to prevent unauthorized injection 
+               of data into OpenNMS when this port is open.
+             -->
+-            <!-- <transportConnector name="openwire" uri="tcp://0.0.0.0:61616?useJmx=false&amp;maximumConnections=1000&amp;wireformat.maxFrameSize=104857600"/> -->
++            <transportConnector name="openwire" uri="tcp://0.0.0.0:61616?useJmx=false&amp;maximumConnections=1000&amp;wireformat.maxFrameSize=104857600"/>
+ 
+             <!-- Uncomment this line to allow localhost TCP connections (for testing purposes) -->
+             <!-- <transportConnector name="openwire" uri="tcp://127.0.0.1:61616?useJmx=false&amp;maximumConnections=1000&amp;wireformat.maxFrameSize=104857600"/> -->

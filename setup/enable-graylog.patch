@@ -1,0 +1,24 @@
+--- log4j2.xml	2017-07-11 11:13:06.000000000 -0400
++++ log4j2.xml.new	2017-07-11 11:28:55.000000000 -0400
+@@ -34,6 +34,12 @@
+     like messages to be logged in some other way.  See http://logging.apache.org/log4j/2.x/ for details.
+   -->
+   <appenders>
++    <Socket name="Graylog_${hostName}" protocol="udp" host="graylog" port="12201">
++        <GelfLayout host="${hostName}" compressionType="GZIP" compressionThreshold="1024">
++            <KeyValuePair key="jvm" value="${java:vm}" />
++            <KeyValuePair key="application_name" value="opennms" />
++        </GelfLayout>
++    </Socket>
+     <Routing name="RoutingAppender">
+       <Routes pattern="$${ctx:prefix}">
+         <Route>
+@@ -208,7 +214,7 @@
+       </DynamicThresholdFilter>
+ 
+       <appender-ref ref="RoutingAppender"/>
+-
++      <appender-ref ref="Graylog_${hostName}" />
+     </root>
+   </loggers>
+ 

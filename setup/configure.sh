@@ -91,6 +91,7 @@ echo "DONE"
 echo "Restart Grafana                                 ... "
 docker-compose stop grafana
 docker-compose up -d grafana
+sleep 10
 
 echo -n "Setup Grafana OpenNMS Data Source               ... "
 curl -s -u admin:mysecret \

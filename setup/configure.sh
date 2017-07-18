@@ -9,6 +9,11 @@ GRAYLOG_USER=admin
 GRAYLOG_PASS=admin
 GRAYLOG_PORT=9000
 
+GRAFANA_HOST=localhost
+GRAFANA_PORT=3000
+GRAFANA_USER=admin
+GRAFANA_PASS=mysecret
+
 # set -x
 
 echo -n "Ensure the ReST API is running before setup        "
@@ -78,3 +83,20 @@ until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOME}
     sleep 2
 done
 echo " DONE"
+
+echo -n "Install Grafana OpenNMS Datasource              ... "
+docker-compose exec grafana grafana-cli plugins install opennms-datasource
+echo "DONE"
+
+echo "Restart Grafana                                 ... "
+docker-compose stop grafana
+docker-compose up -d grafana
+
+echo -n "Setup Grafana OpenNMS Data Source               ... "
+curl -s -u admin:mysecret \
+     -X POST \
+     -H "Content-Type: application/json" \
+     -H "Accept: application/json" \
+     -d @opennms-grafana-datasource.json \
+     http://${GRAFANA_HOST}:${GRAFANA_PORT}/api/datasources
+echo "DONE"

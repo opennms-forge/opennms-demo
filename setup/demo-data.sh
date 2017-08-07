@@ -11,7 +11,7 @@ GRAYLOG_PORT=9000
 # set -x
 
 echo -n "Ensure the ReST API is running before setup        "
-until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOME}:8980); do
+until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}:8980); do
     printf '.'
     sleep 2
 done

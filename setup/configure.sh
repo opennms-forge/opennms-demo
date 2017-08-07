@@ -17,7 +17,7 @@ GRAFANA_PASS=mysecret
 # set -x
 
 echo -n "Ensure the ReST API is running before setup        "
-until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOME}:8980); do
+until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}:8980); do
     printf '.'
     sleep 2
 done
@@ -55,7 +55,7 @@ echo "Restart OpenNMS Horizon                            ... "
 docker-compose stop opennms && docker-compose up -d
 
 echo -n "Wait for web app to be ready                       "
-until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOME}:8980); do
+until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}:8980); do
     printf '.'
     sleep 2
 done
@@ -78,7 +78,7 @@ echo "Restart OpenNMS Horizon                            ... "
 docker-compose stop opennms && docker-compose up -d
 
 echo -n "Wait for web app to be ready                       "
-until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOME}:${OPENNMS_PORT}); do
+until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}:${OPENNMS_PORT}); do
     printf '.'
     sleep 2
 done

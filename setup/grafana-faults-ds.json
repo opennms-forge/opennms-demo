@@ -1,0 +1,15 @@
+{
+    "Name": "OpenNMS FM",
+    "Type": "opennms-helm-fm-ds",
+    "typeLogoUrl": "public/plugins/opennms-helm-fm-ds/img/fm-ds.svg",
+    "Access": "proxy",
+    "url": "http://opennms:8980/opennms",
+    "password": "",
+    "user": "",
+    "database": "",
+    "basicAuth": true,
+    "basicAuthUser": "admin",
+    "basicAuthPassword": "admin",
+    "isDefault": true,
+    "jsonData": {}
+}

@@ -1,0 +1,15 @@
+{
+    "Name": "OpenNMS PM",
+    "Type": "opennms-helm-pm-ds",
+    "typeLogoUrl": "public/plugins/opennms-helm-pm-ds/img/pm-ds.svg",
+    "Access": "proxy",
+    "url": "http://opennms:8980/opennms",
+    "password": "",
+    "user": "",
+    "database": "",
+    "basicAuth": true,
+    "basicAuthUser": "admin",
+    "basicAuthPassword": "admin",
+    "isDefault": false,
+    "jsonData": {}
+}

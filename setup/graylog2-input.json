@@ -8,5 +8,4 @@
   "title": "opennms-input",
   "global": true,
   "type": "org.graylog2.inputs.gelf.udp.GELFUDPInput"
-
 }

@@ -1,27 +1,29 @@
 version: '2'
 
 volumes:
-  data-postgres:
+  postgres.data:
     driver: "local"
-  data-opennms:
+  opennms.etc:
     driver: "local"
-  graylog_esdata_01:
+  opennms.data:
+    driver: "local"
+  graylog.es.data.01:
     driver: local
 
 networks:
-  net-stuttgart:
+  net.stuttgart:
       driver: bridge
       ipam:
         config:
           - subnet: 172.30.0.0/16
-  net-fulda:
+  net.fulda:
       driver: bridge
       ipam:
         config:
           - subnet: 172.31.0.0/16
 services:
   database:
-    image: postgres:9.6.1
+    image: postgres:9.6.3
     container_name: demo-database
     env_file:
       - .postgres.env
@@ -30,18 +32,18 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - data-postgres:/var/lib/postgresql/data
+      - postgres.data:/var/lib/postgresql/data
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.10
 
   opennms:
-    image: opennms/horizon-core-web:20.0.1-1
+    image: opennms/horizon-core-web:20.1.0-1
     container_name: demo-horizon-core-web
     cap_add:
       - NET_ADMIN
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.11
     env_file:
       - .opennms.env
@@ -51,7 +53,7 @@ services:
     depends_on:
       - database
     volumes:
-      - data-opennms:/opennms-data
+      - opennms.data:/opennms-data
       - ./etc:/opt/opennms/etc
     command: ["-s"]
     ports:
@@ -64,10 +66,10 @@ services:
       - "162:162/udp"
 
   grafana:
-    image: grafana/grafana:4.3.2
+    image: opennms/helm:stable
     container_name: demo-grafana
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.9
     environment:
       - TZ=Europe/Berlin
@@ -77,12 +79,12 @@ services:
       - "3000:3000"
 
   minion-fulda-01:
-    image: opennms/minion:20.0.1-1
+    image: opennms/minion:20.1.0-1
     container_name: demo-fd-minion-01
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.12
-      net-fulda:
+      net.fulda:
         ipv4_address: 172.31.0.12
     env_file:
       - .minion-fulda-01.env
@@ -97,7 +99,7 @@ services:
     image: indigo/docker-netsnmp
     container_name: demo-str-srv-01
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.32
     environment:
       - TZ=Europe/Berlin
@@ -108,7 +110,7 @@ services:
     image: indigo/docker-netsnmp
     container_name: demo-str-srv-02
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.33
     environment:
       - TZ=Europe/Berlin
@@ -119,7 +121,7 @@ services:
     image: httpd
     container_name: demo-str-web-01
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.34
     environment:
       - TZ=Europe/Berlin
@@ -130,7 +132,7 @@ services:
     image: indigo/docker-netsnmp
     container_name: demo-fd-srv-01
     networks:
-      net-fulda:
+      net.fulda:
         ipv4_address: 172.31.0.32
     environment:
       - TZ=Europe/Berlin
@@ -141,7 +143,7 @@ services:
     image: indigo/docker-netsnmp
     container_name: demo-fd-srv-02
     networks:
-      net-fulda:
+      net.fulda:
         ipv4_address: 172.31.0.33
     environment:
       - TZ=Europe/Berlin
@@ -152,7 +154,7 @@ services:
     image: httpd
     container_name: demo-fd-web-01
     networks:
-      net-fulda:
+      net.fulda:
         ipv4_address: 172.31.0.34
     environment:
       - TZ=Europe/Berlin
@@ -166,29 +168,32 @@ services:
     environment:
       - TZ=Europe/Berlin
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.13
 
   graylog_es:
-    image: elasticsearch:2
-    container_name: graylog-es-01
-    hostname: elasticsearch
-    command: elasticsearch -Des.cluster.name='graylog'
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3
+    container_name: elasticsearch1
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - TZ=Europe/Berlin
     ulimits:
       memlock:
         soft: -1
         hard: -1
-      mem_limit: 1g
+    mem_limit: 1g
     volumes:
-      - graylog_esdata_01:/usr/share/elasticsearch/data
-    environment:
-      - TZ=Europe/Berlin
+      - graylog.es.data.01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.14
 
   graylog:
-    image: graylog2/server:2.2.3-1
+    image: graylog2/server:2.3.1-1
     hostname: graylog
     environment:
       - TZ=Europe/Berlin
@@ -203,5 +208,5 @@ services:
       - "12201:12201/udp"
       - "514:514/udp"
     networks:
-      net-stuttgart:
+      net.stuttgart:
         ipv4_address: 172.30.0.15

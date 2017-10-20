@@ -160,3 +160,53 @@ services:
       - TZ=Europe/Berlin
     ports:
       - "80"
+
+  graylog_mongodb:
+    image: mongo:3
+    container_name: graylog-mongodb
+    hostname: mongo
+    environment:
+      - TZ=Europe/Berlin
+    networks:
+      net.stuttgart:
+        ipv4_address: 172.30.0.13
+
+  graylog_es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3
+    container_name: elasticsearch1
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - TZ=Europe/Berlin
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 1g
+    volumes:
+      - graylog.es.data.01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      net.stuttgart:
+        ipv4_address: 172.30.0.14
+
+  graylog:
+    image: graylog2/server:2.3.1-1
+    hostname: graylog
+    environment:
+      - TZ=Europe/Berlin
+      - GRAYLOG_PASSWORD_SECRET=somepasswordpepper
+      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+      - GRAYLOG_WEB_ENDPOINT_URI=http://127.0.0.1:9000/api
+    links:
+      - graylog_mongodb:mongo
+      - graylog_es:elasticsearch
+    ports:
+      - "9000:9000"
+      - "12201:12201/udp"
+      - "514:514/udp"
+    networks:
+      net.stuttgart:
+        ipv4_address: 172.30.0.15

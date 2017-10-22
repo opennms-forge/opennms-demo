@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 
 volumes:
   postgres.data:
@@ -7,43 +7,36 @@ volumes:
     driver: "local"
   opennms.data:
     driver: "local"
-  graylog.es.data.01:
-    driver: local
 
 networks:
-  net.stuttgart:
+  net.core:
       driver: bridge
       ipam:
         config:
           - subnet: 172.30.0.0/16
-  net.fulda:
-      driver: bridge
-      ipam:
-        config:
-          - subnet: 172.31.0.0/16
+
 services:
   database:
     image: postgres:9.6
-    container_name: demo-database
+    container_name: opennms.postgres
     env_file:
       - .postgres.env
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "5432:5432"
     volumes:
       - postgres.data:/var/lib/postgresql/data
     networks:
-      net.stuttgart:
+      net.core:
         ipv4_address: 172.30.0.10
 
-  opennms:
-    image: opennms/horizon-core-web:stable
-    container_name: demo-horizon-core-web
+  opennms.eventd:
+    image: opennms/horizon-core-web:stable-healthcheck
+    container_name: opennms.eventd
+    mem_limit: 2g
     cap_add:
       - NET_ADMIN
     networks:
-      net.stuttgart:
+      net.core:
         ipv4_address: 172.30.0.11
     env_file:
       - .opennms.env
@@ -51,112 +44,119 @@ services:
     environment:
       - TZ=Europe/Berlin
     depends_on:
-      - database
+      database:
+        condition: service_started
     volumes:
       - opennms.data:/opennms-data
       - ./etc:/opt/opennms/etc
+      - ./config/eventd/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
+      - ./config/eventd/eventd-configuration.xml:/opt/opennms/etc/eventd-configuration.xml
     command: ["-s"]
-    ports:
-      - "8980:8980"
-      - "18980:18980"
-      - "1099:1099"
-      - "8101:8101"
-      - "61616:61616"
-      - "5817:5817"
-      - "162:162/udp"
 
-  grafana:
-    image: opennms/helm:stable
-    container_name: demo-grafana
+  opennms.webapp:
+    image: opennms/horizon-core-web:stable-healthcheck
+    container_name: opennms.webapp
+    mem_limit: 2g
+    cap_add:
+      - NET_ADMIN
     networks:
-      net.stuttgart:
-        ipv4_address: 172.30.0.9
+      net.core:
+        ipv4_address: 172.30.0.12
+    env_file:
+      - .opennms.env
+      - .postgres.env
     environment:
       - TZ=Europe/Berlin
-    env_file:
-      - .grafana.env
-    ports:
-      - "3000:3000"
-
-  minion-fulda-01:
-    image: opennms/minion:stable
-    container_name: demo-fd-minion-01
-    networks:
-      net.stuttgart:
-        ipv4_address: 172.30.0.12
-      net.fulda:
-        ipv4_address: 172.31.0.12
-    env_file:
-      - .minion-fulda-01.env
+    depends_on:
+      database:
+        condition: service_started
+      opennms.eventd:
+        condition: service_healthy
+    volumes:
+      - opennms.data:/opennms-data
+      - ./etc:/opt/opennms/etc
+      - ./config/webapp/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
+      - ./config/webapp/event.rtc.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.properties
+      - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
     command: ["-f"]
     ports:
-      - "8201:8201"
-      - "18980"
-      - "162/udp"
-      - "514/udp"
+      - "8980:8980"
+      - "8102:8101"
 
-  srv-stuttgart-01:
-    image: indigo/docker-netsnmp
-    container_name: demo-str-srv-01
+  opennms.pollerd:
+    image: opennms/horizon-core-web:stable-healthcheck
+    container_name: opennms.pollerd
+    mem_limit: 2g
+    cap_add:
+      - NET_ADMIN
     networks:
-      net.stuttgart:
-        ipv4_address: 172.30.0.32
+      net.core:
+        ipv4_address: 172.30.0.13
+    env_file:
+      - .opennms.env
+      - .postgres.env
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
+    depends_on:
+      database:
+        condition: service_started
+      opennms.eventd:
+        condition: service_healthy
+    volumes:
+      - opennms.data:/opennms-data
+      - ./etc:/opt/opennms/etc
+      - ./config/pollerd/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
+      - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
+    command: ["-s"]
 
-  srv-stuttgart-02:
-    image: indigo/docker-netsnmp
-    container_name: demo-str-srv-02
+  opennms.collectd:
+    image: opennms/horizon-core-web:stable-healthcheck
+    container_name: opennms.collectd
+    mem_limit: 2g
+    cap_add:
+      - NET_ADMIN
     networks:
-      net.stuttgart:
-        ipv4_address: 172.30.0.33
+      net.core:
+        ipv4_address: 172.30.0.14
+    env_file:
+      - .opennms.env
+      - .postgres.env
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
+    depends_on:
+      database:
+        condition: service_started
+      opennms.eventd:
+        condition: service_healthy
+    volumes:
+      - opennms.data:/opennms-data
+      - ./etc:/opt/opennms/etc
+      - ./config/collectd/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
+      - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
+    command: ["-s"]
 
-  web-stuttgart-01:
-    image: httpd
-    container_name: demo-str-web-01
+  opennms.provisiond:
+    image: opennms/horizon-core-web:stable-healthcheck
+    container_name: opennms.provisiond
+    mem_limit: 2g
+    cap_add:
+      - NET_ADMIN
     networks:
-      net.stuttgart:
-        ipv4_address: 172.30.0.34
+      net.core:
+        ipv4_address: 172.30.0.15
+    env_file:
+      - .opennms.env
+      - .postgres.env
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "80"
-
-  srv-fulda-01:
-    image: indigo/docker-netsnmp
-    container_name: demo-fd-srv-01
-    networks:
-      net.fulda:
-        ipv4_address: 172.31.0.32
-    environment:
-      - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
-
-  srv-fulda-02:
-    image: indigo/docker-netsnmp
-    container_name: demo-fd-srv-02
-    networks:
-      net.fulda:
-        ipv4_address: 172.31.0.33
-    environment:
-      - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
-
-  web-fulda-01:
-    image: httpd
-    container_name: demo-fd-web-01
-    networks:
-      net.fulda:
-        ipv4_address: 172.31.0.34
-    environment:
-      - TZ=Europe/Berlin
-    ports:
-      - "80"
+    depends_on:
+      database:
+        condition: service_started
+      opennms.eventd:
+        condition: service_healthy
+    volumes:
+      - opennms.data:/opennms-data
+      - ./etc:/opt/opennms/etc
+      - ./config/provisiond/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
+      - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
+    command: ["-s"]

@@ -160,7 +160,7 @@ maintained
       <invoke method="status" pass="0" at="status"/>
       <invoke method="stop" pass="0" at="stop"/>
    </service>
-   <service enabled="false"
+   <service enabled="false">
       <name>OpenNMS:Name=Collectd</name>
       <class-name>org.opennms.netmgt.collectd.jmx.Collectd</class-name>
       <invoke method="init" pass="0" at="start"/>

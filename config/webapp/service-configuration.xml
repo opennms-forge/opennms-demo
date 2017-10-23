@@ -120,7 +120,7 @@ maintained
       <invoke method="status" pass="0" at="status"/>
       <invoke method="stop" pass="0" at="stop"/>
    </service>
-   <service enabled="true">
+   <service enabled="false">
       <name>OpenNMS:Name=Rtcd</name>
       <class-name>org.opennms.netmgt.rtc.jmx.Rtcd</class-name>
       <invoke method="init" pass="0" at="start"/>

@@ -1,0 +1,2 @@
+2017-10-23 07:39:34,717 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7d09f08d: startup date [Mon Oct 23 07:39:34 CEST 2017]; parent: ApplicationContext 'daoContext'
+2017-10-23 07:39:34,724 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-alarmd.xml]

@@ -1,0 +1,356 @@
+2017-10-23 07:39:19,188 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c0f30ae: startup date [Mon Oct 23 07:39:19 CEST 2017]; root of context hierarchy
+2017-10-23 07:39:19,277 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.soa-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,352 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-ackd-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,373 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-alarmd-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,393 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-asterisk-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,403 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-config-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,413 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-config-tester-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,420 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-correlator-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,430 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-dao-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,439 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-jetty-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,447 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-provisiond-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,456 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-reportd-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,462 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-reporting-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,469 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-services-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,484 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms_system_report.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,497 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.daemon-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,506 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.bsm.daemon-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,511 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.discovery-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,517 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.events.daemon-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,524 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.events.syslog-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,529 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.events.traps-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,534 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.poller.remote-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,539 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.reporting.availability-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,545 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.reporting.core-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,549 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.reporting.jasper-reports-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,555 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.reporting.repository-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,559 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.telemetry.daemon-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,564 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.ticketing.daemon-21.0.0.jar!/beanRefContext.xml]
+2017-10-23 07:39:19,665 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2e2263cc: startup date [Mon Oct 23 07:39:19 CEST 2017]; root of context hierarchy
+2017-10-23 07:39:19,667 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-configTester.xml]
+2017-10-23 07:39:20,121 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7c32d3cb: startup date [Mon Oct 23 07:39:20 CEST 2017]; root of context hierarchy
+2017-10-23 07:39:20,122 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-soa.xml]
+2017-10-23 07:39:20,169 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@27687263: startup date [Mon Oct 23 07:39:20 CEST 2017]; parent: ApplicationContext 'soaContext'
+2017-10-23 07:39:20,170 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-commonConfigs.xml]
+2017-10-23 07:39:20,328 INFO  [Main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-23 07:39:22,000 INFO  [Main] c.m.v.l.MLog: MLog clients using log4j logging.
+2017-10-23 07:39:22,065 INFO  [Main] c.m.v.c.C3P0Registry: Initializing c3p0-0.9.1.1 [built 15-March-2007 01:32:31; debug? true; trace: 10]
+2017-10-23 07:39:22,191 INFO  [Main] c.m.v.c.i.AbstractPoolBackedDataSource: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 3, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br8avf9rjwm7gl1qwx2k8|446d1537, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.postgresql.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br8avf9rjwm7gl1qwx2k8|446d1537, idleConnectionTestPeriod -> 0, initialPoolSize -> 50, jdbcUrl -> jdbc:postgresql://opennms.postgres:5432/opennms, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 50, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-10-23 07:39:25,693 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55cee81b: startup date [Mon Oct 23 07:39:25 CEST 2017]; parent: ApplicationContext 'commonContext'
+2017-10-23 07:39:25,694 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-daemon.xml]
+2017-10-23 07:39:25,716 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-pinger.xml]
+2017-10-23 07:39:25,763 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-activemq.xml]
+2017-10-23 07:39:25,856 INFO  [Main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-23 07:39:25,997 WARN  [Main] o.a.a.j.p.PooledConnectionFactory: Create pooled connection during start failed. This exception will be ignored.
+javax.jms.JMSException: Error while attempting to add new Connection to the pool
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createJmsException(PooledConnectionFactory.java:266) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:225) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:204) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.start(PooledConnectionFactory.java:290) [activemq-jms-pool-5.14.5.jar:5.14.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1713) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1650) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:778) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:843) [org.apache.servicemix.bundles.spring-context-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) [org.apache.servicemix.bundles.spring-context-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139) [org.apache.servicemix.bundles.spring-context-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:105) [org.apache.servicemix.bundles.spring-context-4.2.9.RELEASE_1.jar:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:1.8.0_151]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:1.8.0_151]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) [?:1.8.0_151]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:267) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1148) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1050) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:648) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1148) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1050) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:648) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1148) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1050) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1064) [org.apache.servicemix.bundles.spring-context-4.2.9.RELEASE_1.jar:?]
+	at org.springframework.beans.factory.access.SingletonBeanFactoryLocator.useBeanFactory(SingletonBeanFactoryLocator.java:396) [org.apache.servicemix.bundles.spring-beans-4.2.9.RELEASE_1.jar:?]
+	at org.opennms.core.spring.BeanUtils.getBeanFactory(BeanUtils.java:80) [org.opennms.core.spring-21.0.0.jar:?]
+	at org.opennms.core.spring.BeanUtils.getFactory(BeanUtils.java:132) [org.opennms.core.spring-21.0.0.jar:?]
+	at org.opennms.netmgt.daemon.AbstractSpringContextJmxServiceDaemon$1.run(AbstractSpringContextJmxServiceDaemon.java:103) [org.opennms.core.daemon-21.0.0.jar:?]
+	at org.opennms.core.logging.Logging.withPrefix(Logging.java:71) [org.opennms.core.logging-21.0.0.jar:?]
+	at org.opennms.netmgt.daemon.AbstractSpringContextJmxServiceDaemon.init(AbstractSpringContextJmxServiceDaemon.java:96) [org.opennms.core.daemon-21.0.0.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) [?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) [?:1.8.0_151]
+	at com.sun.jmx.mbeanserver.StandardMBeanIntrospector.invokeM2(StandardMBeanIntrospector.java:112) [?:1.8.0_151]
+	at com.sun.jmx.mbeanserver.StandardMBeanIntrospector.invokeM2(StandardMBeanIntrospector.java:46) [?:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237) [?:1.8.0_151]
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) [?:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) [?:1.8.0_151]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819) [?:1.8.0_151]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801) [?:1.8.0_151]
+	at org.opennms.netmgt.vmmgr.Invoker.invoke(Invoker.java:277) [org.opennms.core.daemon-21.0.0.jar:?]
+	at org.opennms.netmgt.vmmgr.Invoker.invokeMethods(Invoker.java:206) [org.opennms.core.daemon-21.0.0.jar:?]
+	at org.opennms.netmgt.vmmgr.Starter.start(Starter.java:154) [org.opennms.core.daemon-21.0.0.jar:?]
+	at org.opennms.netmgt.vmmgr.Starter.startDaemon(Starter.java:94) [org.opennms.core.daemon-21.0.0.jar:?]
+	at org.opennms.netmgt.vmmgr.Controller.start(Controller.java:173) [org.opennms.core.daemon-21.0.0.jar:?]
+	at org.opennms.netmgt.vmmgr.Controller.main(Controller.java:150) [org.opennms.core.daemon-21.0.0.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.opennms.bootstrap.Bootstrap$4.run(Bootstrap.java:525) [opennms_bootstrap.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+Caused by: javax.jms.JMSException: Could not create Transport. Reason: java.io.IOException: Broker named 'localhost' does not exist.
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:36) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createTransport(ActiveMQConnectionFactory.java:333) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:346) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:304) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:244) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:275) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:95) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:92) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.commons.pool2.impl.GenericKeyedObjectPool.create(GenericKeyedObjectPool.java:1041) ~[commons-pool2-2.4.2.jar:2.4.2]
+	at org.apache.commons.pool2.impl.GenericKeyedObjectPool.addObject(GenericKeyedObjectPool.java:1221) ~[commons-pool2-2.4.2.jar:2.4.2]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:221) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	... 95 more
+Caused by: java.io.IOException: Broker named 'localhost' does not exist.
+	at org.apache.activemq.transport.vm.VMTransportFactory.doCompositeConnect(VMTransportFactory.java:119) ~[activemq-broker-5.14.5.jar:5.14.5]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doConnect(VMTransportFactory.java:56) ~[activemq-broker-5.14.5.jar:5.14.5]
+	at org.apache.activemq.transport.TransportFactory.connect(TransportFactory.java:65) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createTransport(ActiveMQConnectionFactory.java:331) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:346) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:304) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:244) ~[activemq-client-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:275) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:95) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:92) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	at org.apache.commons.pool2.impl.GenericKeyedObjectPool.create(GenericKeyedObjectPool.java:1041) ~[commons-pool2-2.4.2.jar:2.4.2]
+	at org.apache.commons.pool2.impl.GenericKeyedObjectPool.addObject(GenericKeyedObjectPool.java:1221) ~[commons-pool2-2.4.2.jar:2.4.2]
+	at org.apache.activemq.jms.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:221) ~[activemq-jms-pool-5.14.5.jar:5.14.5]
+	... 95 more
+2017-10-23 07:39:26,744 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2d51cdba: startup date [Mon Oct 23 07:39:26 CEST 2017]; parent: ApplicationContext 'daemonContext'
+2017-10-23 07:39:26,746 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-dao.xml]
+2017-10-23 07:39:26,794 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-rrd-api-21.0.0.jar!/META-INF/opennms/applicationContext-rrd.xml]
+2017-10-23 07:39:26,804 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.snmp.api-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,808 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-alarm-northbounder-bsf-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,811 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-alarm-northbounder-drools-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,814 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-alarm-northbounder-email-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,817 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-alarm-northbounder-snmptrap-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,820 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-alarm-northbounder-syslog-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,823 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-config-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,827 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-provision-persistence-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,834 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-requisition-dns-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,840 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-requisition-service-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,848 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-rws-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,853 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-vmware-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,859 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.ipc.rpc.camel-impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:26,862 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-rpc-client-camel.xml]
+2017-10-23 07:39:27,535 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.ipc.rpc.utils-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,538 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-rpc-utils.xml]
+2017-10-23 07:39:27,545 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.ipc.sink.camel-impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,551 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.ipc.sink.kafka-impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,556 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.jmx.api-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,566 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.core.snmp.proxy.rpc-impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,570 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-rpc-snmp.xml]
+2017-10-23 07:39:27,578 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.bsm.persistence.impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,585 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.bsm.service.impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,591 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.events.daemon-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,594 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-eventUtil.xml]
+2017-10-23 07:39:27,600 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.jdbc-collector-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,605 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.topology.persistence.impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,612 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.wsman-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,617 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.icmp.proxy.rpc-impl-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,620 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-rpc-icmp.xml]
+2017-10-23 07:39:27,640 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.protocols.xml-21.0.0.jar!/META-INF/opennms/component-dao.xml]
+2017-10-23 07:39:27,929 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-ipc-sink-server-camel.xml]
+2017-10-23 07:39:28,188 INFO  [Main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-23 07:39:28,506 INFO  [Main] o.h.a.c.Version: Hibernate Commons Annotations 3.2.0.Final
+2017-10-23 07:39:28,518 INFO  [Main] o.h.c.Environment: Hibernate 3.6.10.Final
+2017-10-23 07:39:28,522 INFO  [Main] o.h.c.Environment: hibernate.properties not found
+2017-10-23 07:39:28,525 INFO  [Main] o.h.c.Environment: Bytecode provider name : javassist
+2017-10-23 07:39:28,529 INFO  [Main] o.h.c.Environment: using JDK 1.4 java.sql.Timestamp handling
+2017-10-23 07:39:28,607 INFO  [Main] o.h.c.Configuration: Mapping package org.opennms.netmgt.dao.hibernate
+2017-10-23 07:39:28,634 WARN  [Main] o.h.c.AnnotationBinder: Package not found or wo package-info.java: org.opennms.netmgt.dao.hibernate
+2017-10-23 07:39:28,634 INFO  [Main] o.h.c.Configuration: Mapping package org.opennms.netmgt.model
+2017-10-23 07:39:28,647 INFO  [Main] o.h.c.AnnotationBinder: Binding filter definition: authorizedOnly
+2017-10-23 07:39:28,751 INFO  [Main] o.h.c.Configuration: Mapping package org.opennms.netmgt.model
+2017-10-23 07:39:28,751 INFO  [Main] o.h.c.AnnotationBinder: Binding filter definition: authorizedOnly
+2017-10-23 07:39:28,752 INFO  [Main] o.h.c.Configuration: Mapping package org.opennms.netmgt.model.monitoringLocations
+2017-10-23 07:39:28,770 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.BusinessServiceEdgeEntity
+2017-10-23 07:39:28,840 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.BusinessServiceChildEdgeEntity
+2017-10-23 07:39:28,850 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.BusinessServiceEntity
+2017-10-23 07:39:28,878 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.IPServiceEdgeEntity
+2017-10-23 07:39:28,881 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.SingleReductionKeyEdgeEntity
+2017-10-23 07:39:28,883 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.map.AbstractMapFunctionEntity
+2017-10-23 07:39:28,885 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.map.DecreaseEntity
+2017-10-23 07:39:28,887 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.map.IdentityEntity
+2017-10-23 07:39:28,888 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.map.IgnoreEntity
+2017-10-23 07:39:28,889 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.map.IncreaseEntity
+2017-10-23 07:39:28,889 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.map.SetToEntity
+2017-10-23 07:39:28,893 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.reduce.AbstractReductionFunctionEntity
+2017-10-23 07:39:28,894 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.reduce.ExponentialPropagationEntity
+2017-10-23 07:39:28,895 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.reduce.HighestSeverityAboveEntity
+2017-10-23 07:39:28,896 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.reduce.HighestSeverityEntity
+2017-10-23 07:39:28,897 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.bsm.persistence.api.functions.reduce.ThresholdEntity
+2017-10-23 07:39:28,898 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.dao.hibernate.AccessLock
+2017-10-23 07:39:28,900 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.BridgeBridgeLink
+2017-10-23 07:39:28,905 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.BridgeElement
+2017-10-23 07:39:28,910 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.BridgeMacLink
+2017-10-23 07:39:28,913 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.BridgeStpLink
+2017-10-23 07:39:28,917 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.CdpElement
+2017-10-23 07:39:28,921 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.CdpLink
+2017-10-23 07:39:28,924 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.HwEntityAttributeType
+2017-10-23 07:39:28,925 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.IpNetToMedia
+2017-10-23 07:39:28,927 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.IsIsElement
+2017-10-23 07:39:28,930 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.IsIsLink
+2017-10-23 07:39:28,933 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.LldpElement
+2017-10-23 07:39:28,936 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.LldpLink
+2017-10-23 07:39:28,939 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsAcknowledgment
+2017-10-23 07:39:28,942 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsAlarm
+2017-10-23 07:39:28,949 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsApplication
+2017-10-23 07:39:28,952 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsAssetRecord
+2017-10-23 07:39:28,962 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsCategory
+2017-10-23 07:39:28,963 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsMonitoringSystem
+2017-10-23 07:39:28,965 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsDistPoller
+2017-10-23 07:39:28,966 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsEvent
+2017-10-23 07:39:28,973 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsEventParameter
+2017-10-23 07:39:28,976 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsFilterFavorite
+2017-10-23 07:39:28,979 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsHwEntity
+2017-10-23 07:39:28,984 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsHwEntityAttribute
+2017-10-23 07:39:28,985 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsIpInterface
+2017-10-23 07:39:28,989 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsLocationMonitor
+2017-10-23 07:39:28,990 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsLocationSpecificStatus
+2017-10-23 07:39:28,994 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsMemo
+2017-10-23 07:39:28,996 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsMonitoredService
+2017-10-23 07:39:28,999 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsNode
+2017-10-23 07:39:29,013 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsNotification
+2017-10-23 07:39:29,016 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsOutage
+2017-10-23 07:39:29,018 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsPathOutage
+2017-10-23 07:39:29,021 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsReductionKeyMemo
+2017-10-23 07:39:29,022 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsServiceType
+2017-10-23 07:39:29,023 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsSnmpInterface
+2017-10-23 07:39:29,026 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OnmsUserNotification
+2017-10-23 07:39:29,028 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OspfElement
+2017-10-23 07:39:29,031 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.OspfLink
+2017-10-23 07:39:29,032 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.ReportCatalogEntry
+2017-10-23 07:39:29,033 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.RequisitionedCategoryAssociation
+2017-10-23 07:39:29,034 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.ResourceReference
+2017-10-23 07:39:29,035 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.ScanReport
+2017-10-23 07:39:29,038 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.ScanReportLog
+2017-10-23 07:39:29,040 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.ScanReportPollResult
+2017-10-23 07:39:29,042 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.StatisticsReport
+2017-10-23 07:39:29,044 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.StatisticsReportData
+2017-10-23 07:39:29,045 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.minion.OnmsMinion
+2017-10-23 07:39:29,045 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.model.monitoringLocations.OnmsMonitoringLocation
+2017-10-23 07:39:29,047 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.topology.persistence.api.LayoutEntity
+2017-10-23 07:39:29,048 INFO  [Main] o.h.c.AnnotationBinder: Binding entity from annotated class: org.opennms.netmgt.topology.persistence.api.VertexPositionEntity
+2017-10-23 07:39:29,066 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.bsm.persistence.api.BusinessServiceEntity.edges -> bsm_service_edge
+2017-10-23 07:39:29,067 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsEvent.associatedServiceLostOutages -> outages
+2017-10-23 07:39:29,068 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsEvent.associatedServiceRegainedOutages -> outages
+2017-10-23 07:39:29,068 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsEvent.eventParameters -> event_parameters
+2017-10-23 07:39:29,069 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsEvent.notifications -> notifications
+2017-10-23 07:39:29,069 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsHwEntity.children -> hwEntity
+2017-10-23 07:39:29,069 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsHwEntity.hwEntityAttributes -> hwEntityAttribute
+2017-10-23 07:39:29,069 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsIpInterface.monitoredServices -> ifServices
+2017-10-23 07:39:29,070 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsMonitoredService.currentOutages -> outages
+2017-10-23 07:39:29,070 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsNode.ipInterfaces -> ipInterface
+2017-10-23 07:39:29,071 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsNode.lldpLinks -> lldpLink
+2017-10-23 07:39:29,071 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsNode.snmpInterfaces -> snmpInterface
+2017-10-23 07:39:29,071 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsNotification.usersNotified -> usersNotified
+2017-10-23 07:39:29,072 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.OnmsSnmpInterface.ipInterfaces -> ipInterface
+2017-10-23 07:39:29,072 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.ScanReport.pollResults -> scanReportPollResults
+2017-10-23 07:39:29,072 INFO  [Main] o.h.c.a.CollectionBinder: Mapping collection: org.opennms.netmgt.model.StatisticsReport.data -> statisticsReportData
+2017-10-23 07:39:29,079 INFO  [Main] o.h.c.Configuration: Hibernate Validator not found: ignoring
+2017-10-23 07:39:29,312 INFO  [Main] o.s.o.h.a.AnnotationSessionFactoryBean: Building new Hibernate SessionFactory
+2017-10-23 07:39:29,388 INFO  [Main] o.h.c.s.HibernateSearchEventListenerRegister: Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-10-23 07:39:29,432 INFO  [Main] o.h.c.ConnectionProviderFactory: Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-10-23 07:39:29,464 INFO  [Main] o.h.d.Dialect: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2017-10-23 07:39:29,474 INFO  [Main] o.h.e.j.JdbcSupportLoader: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2017-10-23 07:39:29,474 INFO  [Main] o.h.c.SettingsFactory: Database ->
+       name : PostgreSQL
+    version : 9.6.5
+      major : 9
+      minor : 6
+2017-10-23 07:39:29,475 INFO  [Main] o.h.c.SettingsFactory: Driver ->
+       name : PostgreSQL Native Driver
+    version : PostgreSQL 9.4.1211
+      major : 9
+      minor : 4
+2017-10-23 07:39:29,480 INFO  [Main] o.h.t.TransactionFactoryFactory: Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-10-23 07:39:29,483 INFO  [Main] o.h.t.TransactionManagerLookupFactory: No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-10-23 07:39:29,483 INFO  [Main] o.h.c.SettingsFactory: Automatic flush during beforeCompletion(): disabled
+2017-10-23 07:39:29,484 INFO  [Main] o.h.c.SettingsFactory: Automatic session close at end of transaction: disabled
+2017-10-23 07:39:29,484 INFO  [Main] o.h.c.SettingsFactory: Scrollable result sets: enabled
+2017-10-23 07:39:29,485 INFO  [Main] o.h.c.SettingsFactory: JDBC3 getGeneratedKeys(): enabled
+2017-10-23 07:39:29,485 INFO  [Main] o.h.c.SettingsFactory: Connection release mode: auto
+2017-10-23 07:39:29,485 INFO  [Main] o.h.c.SettingsFactory: Default batch fetch size: 1
+2017-10-23 07:39:29,486 INFO  [Main] o.h.c.SettingsFactory: Generate SQL with comments: disabled
+2017-10-23 07:39:29,486 INFO  [Main] o.h.c.SettingsFactory: Order SQL updates by primary key: disabled
+2017-10-23 07:39:29,486 INFO  [Main] o.h.c.SettingsFactory: Order SQL inserts for batching: disabled
+2017-10-23 07:39:29,486 INFO  [Main] o.h.c.SettingsFactory: Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-10-23 07:39:29,490 INFO  [Main] o.h.h.a.ASTQueryTranslatorFactory: Using ASTQueryTranslatorFactory
+2017-10-23 07:39:29,490 INFO  [Main] o.h.c.SettingsFactory: Query language substitutions: {}
+2017-10-23 07:39:29,490 INFO  [Main] o.h.c.SettingsFactory: JPA-QL strict compliance: disabled
+2017-10-23 07:39:29,490 INFO  [Main] o.h.c.SettingsFactory: Second-level cache: disabled
+2017-10-23 07:39:29,491 INFO  [Main] o.h.c.SettingsFactory: Query cache: disabled
+2017-10-23 07:39:29,491 INFO  [Main] o.h.c.SettingsFactory: Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-10-23 07:39:29,492 INFO  [Main] o.h.c.SettingsFactory: Optimize cache for minimal puts: disabled
+2017-10-23 07:39:29,492 INFO  [Main] o.h.c.SettingsFactory: Structured second-level cache entries: disabled
+2017-10-23 07:39:29,500 INFO  [Main] o.h.c.SettingsFactory: Statistics: disabled
+2017-10-23 07:39:29,501 INFO  [Main] o.h.c.SettingsFactory: Deleted entity synthetic identifier rollback: disabled
+2017-10-23 07:39:29,501 INFO  [Main] o.h.c.SettingsFactory: Default entity-mode: pojo
+2017-10-23 07:39:29,502 INFO  [Main] o.h.c.SettingsFactory: Named query checking : enabled
+2017-10-23 07:39:29,502 INFO  [Main] o.h.c.SettingsFactory: Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+2017-10-23 07:39:29,520 INFO  [Main] o.h.i.SessionFactoryImpl: building session factory
+2017-10-23 07:39:29,528 INFO  [Main] o.h.t.BasicTypeRegistry: Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7760a753
+2017-10-23 07:39:29,971 INFO  [Main] o.h.i.SessionFactoryObjectFactory: Not binding factory to JNDI, no JNDI name configured
+2017-10-23 07:39:30,009 INFO  [Main] o.s.o.h.HibernateTransactionManager: Using DataSource [org.opennms.core.db.C3P0ConnectionFactory@3249b1a5] of Hibernate SessionFactory for HibernateTransactionManager
+2017-10-23 07:39:31,303 WARN  [Main] o.o.n.a.n.b.BSFNorthbounderManager: The BSF NBI is globally disabled, the destinations won't be registered which means all the alarms will be rejected.
+2017-10-23 07:39:31,345 WARN  [Main] o.o.n.a.n.d.DroolsNorthbounderManager: The Drools NBI is globally disabled, the destinations won't be registered which means all the alarms will be rejected.
+2017-10-23 07:39:31,389 WARN  [Main] o.o.n.a.n.e.EmailNorthbounderManager: The Email NBI is globally disabled, the destinations won't be registered which means all the alarms will be rejected.
+2017-10-23 07:39:31,462 WARN  [Main] o.o.n.a.n.s.SnmpTrapNorthbounderManager: The SNMP Trap NBI is globally disabled, the destinations won't be registered which means all the alarms will be rejected.
+2017-10-23 07:39:31,511 WARN  [Main] o.o.n.a.n.s.SyslogNorthbounderManager: The Syslog NBI is globally disabled, the destinations won't be registered which means all the alarms will be rejected.
+2017-10-23 07:39:33,654 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@49cc560e: startup date [Mon Oct 23 07:39:33 CEST 2017]; parent: ApplicationContext 'daoContext'
+2017-10-23 07:39:33,655 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-eventDaemon.xml]
+2017-10-23 07:39:33,902 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-daoEvents.xml]
+2017-10-23 07:39:33,952 INFO  [Main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring

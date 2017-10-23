@@ -16,7 +16,7 @@ networks:
           - subnet: 172.30.0.0/16
 
 services:
-  database:
+  opennms.postgres:
     image: postgres:9.6
     container_name: opennms.postgres
     env_file:
@@ -44,10 +44,11 @@ services:
     environment:
       - TZ=Europe/Berlin
     depends_on:
-      database:
+      opennms.postgres:
         condition: service_started
     volumes:
       - opennms.data:/opennms-data
+      - ./logs:/opt/opennms/logs
       - ./etc:/opt/opennms/etc
       - ./config/eventd/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
       - ./config/eventd/eventd-configuration.xml:/opt/opennms/etc/eventd-configuration.xml
@@ -68,7 +69,7 @@ services:
     environment:
       - TZ=Europe/Berlin
     depends_on:
-      database:
+      opennms.postgres:
         condition: service_started
       opennms.eventd:
         condition: service_healthy
@@ -98,7 +99,7 @@ services:
     environment:
       - TZ=Europe/Berlin
     depends_on:
-      database:
+      opennms.postgres:
         condition: service_started
       opennms.eventd:
         condition: service_healthy
@@ -107,7 +108,7 @@ services:
       - ./etc:/opt/opennms/etc
       - ./config/pollerd/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
       - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
-    command: ["-s"]
+    command: ["-f"]
 
   opennms.collectd:
     image: opennms/horizon-core-web:stable-healthcheck
@@ -124,7 +125,7 @@ services:
     environment:
       - TZ=Europe/Berlin
     depends_on:
-      database:
+      opennms.postgres:
         condition: service_started
       opennms.eventd:
         condition: service_healthy
@@ -133,7 +134,7 @@ services:
       - ./etc:/opt/opennms/etc
       - ./config/collectd/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
       - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
-    command: ["-s"]
+    command: ["-f"]
 
   opennms.provisiond:
     image: opennms/horizon-core-web:stable-healthcheck
@@ -150,7 +151,7 @@ services:
     environment:
       - TZ=Europe/Berlin
     depends_on:
-      database:
+      opennms.postgres:
         condition: service_started
       opennms.eventd:
         condition: service_healthy
@@ -159,4 +160,4 @@ services:
       - ./etc:/opt/opennms/etc
       - ./config/provisiond/service-configuration.xml:/opt/opennms/etc/service-configuration.xml
       - ./config/generic/event.rtc.proxy.properties:/opt/opennms/etc/opennms.properties.d/event.rtc.proxy.properties
-    command: ["-s"]
+    command: ["-f"]

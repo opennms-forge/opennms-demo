@@ -1,0 +1,3 @@
+2017-10-23 07:39:35,613 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@551fe30d: startup date [Mon Oct 23 07:39:35 CEST 2017]; parent: ApplicationContext 'daoContext'
+2017-10-23 07:39:35,618 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-enhancedLinkd.xml]
+2017-10-23 07:39:35,650 INFO  [Main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring

@@ -1,0 +1,42 @@
+2017-10-23 07:39:35,982 INFO  [Main] o.s.c.s.ClassPathXmlApplicationContext: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@239e4079: startup date [Mon Oct 23 07:39:35 CEST 2017]; parent: ApplicationContext 'daoContext'
+2017-10-23 07:39:35,990 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-provisiond.xml]
+2017-10-23 07:39:36,003 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-bsf-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,010 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-datagram-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,016 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-generic-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,022 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-jdbc-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,029 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-jmx-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,036 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-lineoriented-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,048 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-simple-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,059 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-ssh-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,065 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detector-web-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,071 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-wmi-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,077 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/org.opennms.features.wsman-21.0.0.jar!/META-INF/opennms/detectors.xml]
+2017-10-23 07:39:36,083 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-detectorclient-rpc-21.0.0.jar!/META-INF/opennms/provisiond-extensions.xml]
+2017-10-23 07:39:36,086 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-rpc-detect.xml]
+2017-10-23 07:39:36,092 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from class path resource [META-INF/opennms/applicationContext-rpc-dns.xml]
+2017-10-23 07:39:36,099 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-provision-geolocation-21.0.0.jar!/META-INF/opennms/provisiond-extensions.xml]
+2017-10-23 07:39:36,103 INFO  [Main] o.s.b.f.x.XmlBeanDefinitionReader: Loading XML bean definitions from URL [jar:file:/opt/opennms/lib/opennms-provision-persistence-21.0.0.jar!/META-INF/opennms/provisiond-extensions.xml]
+2017-10-23 07:39:36,255 INFO  [Main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-10-23 07:39:36,297 INFO  [Main] o.s.s.c.ScheduledExecutorFactoryBean: Initializing ExecutorService  'importExecutor'
+2017-10-23 07:39:36,297 INFO  [Main] o.s.s.c.ScheduledExecutorFactoryBean: Initializing ExecutorService  'scanExecutor'
+2017-10-23 07:39:36,298 INFO  [Main] o.s.s.c.ScheduledExecutorFactoryBean: Initializing ExecutorService  'writeExecutor'
+2017-10-23 07:39:36,875 INFO  [Main] o.q.i.StdSchedulerFactory: Using default implementation for ThreadExecutor
+2017-10-23 07:39:36,878 INFO  [Main] o.q.c.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-23 07:39:36,878 INFO  [Main] o.q.c.QuartzScheduler: Quartz Scheduler v.2.2.3 created.
+2017-10-23 07:39:36,878 INFO  [Main] o.q.s.RAMJobStore: RAMJobStore initialized.
+2017-10-23 07:39:36,879 INFO  [Main] o.q.c.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.3) 'provisiond' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-23 07:39:36,879 INFO  [Main] o.q.i.StdSchedulerFactory: Quartz scheduler 'provisiond' initialized from an externally provided properties instance.
+2017-10-23 07:39:36,879 INFO  [Main] o.q.i.StdSchedulerFactory: Quartz scheduler version: 2.2.3
+2017-10-23 07:39:36,880 INFO  [Main] o.q.c.QuartzScheduler: JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6498f794
+2017-10-23 07:39:36,893 INFO  [Main] o.q.c.QuartzScheduler: JobFactory set to: org.opennms.netmgt.provision.service.ImportJobFactory@27317c89
+2017-10-23 07:39:36,957 INFO  [Main] o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
+2017-10-23 07:39:36,958 INFO  [Main] o.s.s.q.SchedulerFactoryBean: Starting Quartz Scheduler now
+2017-10-23 07:39:36,958 INFO  [Main] o.q.c.QuartzScheduler: Scheduler provisiond_$_NON_CLUSTERED started.
+2017-10-23 07:39:37,488 INFO  [Main] o.q.c.QuartzScheduler: Scheduler provisiond_$_NON_CLUSTERED started.

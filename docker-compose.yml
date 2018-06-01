@@ -1,14 +1,12 @@
-version: '2'
+version: '2.3'
 
 volumes:
-  postgres.data:
+  data-postgres:
     driver: "local"
-  opennms.etc:
+  data-opennms-share:
     driver: "local"
-  opennms.data:
+  data-opennms-etc:
     driver: "local"
-  graylog.es.data.01:
-    driver: local
 
 networks:
   net.stuttgart:
@@ -23,7 +21,7 @@ networks:
           - subnet: 172.31.0.0/16
 services:
   database:
-    image: postgres:9.6
+    image: postgres:10
     container_name: demo-database
     env_file:
       - .postgres.env
@@ -32,13 +30,13 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres.data:/var/lib/postgresql/data
+      - data-postgres:/var/lib/postgresql/data
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.10
 
   opennms:
-    image: opennms/horizon-core-web:stable
+    image: opennms/horizon-core-web:latest
     container_name: demo-horizon-core-web
     cap_add:
       - NET_ADMIN
@@ -53,20 +51,18 @@ services:
     depends_on:
       - database
     volumes:
-      - opennms.data:/opennms-data
-      - ./etc:/opt/opennms/etc
+      - data-opennms-etc:/opt/opennms/etc
+      - data-opennms-share:/data-opennms-share
+      - ./etc-overlay:/opt/opennms-etc-overlay
     command: ["-s"]
     ports:
       - "8980:8980"
-      - "18980:18980"
-      - "1099:1099"
       - "8101:8101"
       - "61616:61616"
-      - "5817:5817"
       - "162:162/udp"
 
   grafana:
-    image: opennms/helm:stable
+    image: opennms/helm:latest
     container_name: demo-grafana
     networks:
       net.stuttgart:
@@ -79,7 +75,7 @@ services:
       - "3000:3000"
 
   minion-fulda-01:
-    image: opennms/minion:stable
+    image: opennms/minion:latest
     container_name: demo-fd-minion-01
     networks:
       net.stuttgart:

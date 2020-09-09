@@ -36,7 +36,7 @@ services:
         ipv4_address: 172.30.0.10
 
   opennms:
-    image: opennms/horizon-core-web:latest
+    image: opennms/horizon:26.2.1
     container_name: demo-horizon-core-web
     cap_add:
       - NET_ADMIN
@@ -75,7 +75,7 @@ services:
       - "3000:3000"
 
   minion-fulda-01:
-    image: opennms/minion:latest
+    image: opennms/minion:26.2.1
     container_name: demo-fd-minion-01
     networks:
       net.stuttgart:

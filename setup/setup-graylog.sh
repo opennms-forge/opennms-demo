@@ -24,3 +24,19 @@ echo -n "Enable logging to Graylog2                         ... "
 patch log4j2.xml < ../setup/enable-graylog.patch
 echo "DONE"
 
+echo -n "Create Requisition                                 ... "
+curl -s -u ${OPENNMS_USER}:${OPENNMS_PASS} \
+     -X POST \
+     -H "Content-Type: application/xml" \
+     -H "Accept: application/xml" \
+     -d @graylog-server.xml \
+     http://${OPENNMS_HOST}:${OPENNMS_PORT}/opennms/rest/requisitions
+echo "DONE"
+
+echo -n "Import requisition for demo environment            ... "
+curl -s -u ${OPENNMS_USER}:${OPENNMS_PASS} \
+     -X PUT \
+     http://${OPENNMS_HOST}:${OPENNMS_PORT}/opennms/rest/requisitions/graylog-server/import
+echo "DONE"
+
+

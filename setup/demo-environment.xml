@@ -24,30 +24,6 @@
     <asset name="latitude" value="48.8258763"/>
   </node>
 
-  <node location="Default" foreign-id="graylog-mongodb" node-label="graylog-mongodb">
-    <interface ip-addr="172.30.0.13" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-    </interface>
-    <asset name="longitude" value="9.1685303"/>
-    <asset name="latitude" value="48.8258763"/>
-  </node>
-
-  <node location="Default" foreign-id="graylog-es01" node-label="graylog-es01">
-    <interface ip-addr="172.30.0.14" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-    </interface>
-    <asset name="longitude" value="9.1685303"/>
-    <asset name="latitude" value="48.8258763"/>
-  </node>
-
-  <node location="Default" foreign-id="graylog" node-label="graylog">
-    <interface ip-addr="172.30.0.15" status="1" snmp-primary="P">
-      <monitored-service service-name="ICMP"/>
-    </interface>
-    <asset name="longitude" value="9.1685303"/>
-    <asset name="latitude" value="48.8258763"/>
-  </node>
-
   <node location="Default" foreign-id="srv-stuttgart-01" node-label="srv-stuttgart-01">
     <interface ip-addr="172.30.0.32" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>

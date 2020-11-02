@@ -57,36 +57,36 @@ until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}
 done
 echo " DONE"
 
-#
-# Setup Demo data with foreign sources, requisitions and a topology
-#
 cd ../setup
-echo "Restart OpenNMS Horizon                            ... "
-docker-compose stop opennms && docker-compose up -d
-
-echo -n "Wait for web app to be ready                       "
-until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}:${OPENNMS_PORT}); do
-    printf '.'
-    sleep 2
-done
-echo " DONE"
-
-echo "Restart Grafana                                 ... "
-docker-compose stop grafana
-docker-compose up -d grafana
-sleep 10
-
-echo -n "Setup Grafana Faults Data Source             ... "
-curl -s -u admin:mysecret \
+echo -n "Enable OpenNMS Helm plugin                   ... "
+curl -s -u $GRAFANA_USER:$GRAFANA_PASS \
      -X POST \
      -H "Content-Type: application/json" \
      -H "Accept: application/json" \
-     -d @grafana-faults-ds.json \
+     -d '{"enabled": true}' \
+     http://${GRAFANA_HOST}:${GRAFANA_PORT}/api/plugins/opennms-helm-app/settings
+echo "DONE"
+
+echo -n "Setup Grafana Entity Data Source             ... "
+curl -s -u $GRAFANA_USER:$GRAFANA_PASS \
+     -X POST \
+     -H "Content-Type: application/json" \
+     -H "Accept: application/json" \
+     -d @grafana-entity-ds.json \
+     http://${GRAFANA_HOST}:${GRAFANA_PORT}/api/datasources
+echo "DONE"
+
+echo -n "Setup Grafana Flow Data Source               ... "
+curl -s -u $GRAFANA_USER:$GRAFANA_PASS \
+     -X POST \
+     -H "Content-Type: application/json" \
+     -H "Accept: application/json" \
+     -d @grafana-flow-ds.json \
      http://${GRAFANA_HOST}:${GRAFANA_PORT}/api/datasources
 echo "DONE"
 
 echo -n "Setup Grafana Performance Data Source        ... "
-curl -s -u admin:mysecret \
+curl -s -u $GRAFANA_USER:$GRAFANA_PASS \
      -X POST \
      -H "Content-Type: application/json" \
      -H "Accept: application/json" \

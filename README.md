@@ -4,9 +4,8 @@ OpenNMS demo environment with Docker and Docker Compose.
 
 # Usage
 
-Please adjust the directory for the [opennms/etc](https://github.com/opennms-forge/opennms-demo/blob/master/docker-compose.yml#L57) directory directory in the opennms-data container.
-
-    ./etc:/opt/opennms/etc
+If you want bind mount an etc directory to the local host instead of a volume to persist your config you can use
+[./etc](https://github.com/opennms-forge/opennms-demo/blob/master/docker-compose.yml#L57) instead of `data-opennms-etc`.
 
 HINT: The directory will be created in case it does not exist and will be initialized with a pristine _OpenNMS_ configuration.
 

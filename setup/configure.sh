@@ -36,8 +36,8 @@ curl -s -u ${OPENNMS_USER}:${OPENNMS_PASS} \
 echo "DONE"
 
 echo -n "Create user on Minion for ReST API and HTTP broker ... "
-docker-compose exec minion-fulda-01 /opt/minion/bin/client "scv:set opennms.http minion minion"
-docker-compose exec minion-fulda-01 /opt/minion/bin/client "scv:set opennms.broker minion minion"
+docker-compose exec minion-fulda-01 /opt/minion/bin/client "opennms:scv-set opennms.http minion minion"
+docker-compose exec minion-fulda-01 /opt/minion/bin/client "opennms:scv-set opennms.broker minion minion"
 
 #
 # Change into OpenNMS config directory to apply configuration patches for Graylog and ActiveMQ for Minions

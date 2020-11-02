@@ -51,7 +51,7 @@ services:
     depends_on:
       - database
     volumes:
-      - data-opennms-etc:/opt/opennms/etc
+      - ./etc:/opt/opennms/etc
       - data-opennms-share:/data-opennms-share
       - ./etc-overlay:/opt/opennms-etc-overlay
     command: ["-s"]

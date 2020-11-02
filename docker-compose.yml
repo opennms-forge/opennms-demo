@@ -1,12 +1,9 @@
+---
 version: '2.3'
 
 volumes:
-  data-postgres:
-    driver: "local"
-  data-opennms-share:
-    driver: "local"
-  data-opennms-etc:
-    driver: "local"
+  data-postgres: {}
+  data-opennms-share: {}
 
 networks:
   net.stuttgart:
@@ -21,7 +18,7 @@ networks:
           - subnet: 172.31.0.0/16
 services:
   database:
-    image: postgres:10
+    image: postgres:12
     container_name: demo-database
     env_file:
       - .postgres.env
@@ -36,7 +33,7 @@ services:
         ipv4_address: 172.30.0.10
 
   opennms:
-    image: opennms/horizon:26.2.1
+    image: opennms/horizon:26.2.2
     container_name: demo-horizon-core-web
     cap_add:
       - NET_ADMIN

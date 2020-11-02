@@ -47,10 +47,6 @@ echo -n "Enable listening for ActiveMQ on all interfaces    ... "
 patch opennms-activemq.xml < ../setup/activemq-listen.patch
 echo "DONE"
 
-echo -n "Enable logging to Graylog2                         ... "
-patch log4j2.xml < ../setup/enable-graylog.patch
-echo "DONE"
-
 echo "Restart OpenNMS Horizon                            ... "
 docker-compose stop opennms && docker-compose up -d
 
@@ -65,15 +61,6 @@ echo " DONE"
 # Setup Demo data with foreign sources, requisitions and a topology
 #
 cd ../setup
-echo -n "Create Graylog input source for OpenNMS logging    ... "
-curl -s -u ${GRAYLOG_USER}:${GRAYLOG_PASS} \
-     -X POST \
-     -H "Content-Type: application/json" \
-     -H "Accept: application/json" \
-     -d @graylog2-input.json \
-     http://${GRAYLOG_HOST}:${GRAYLOG_PORT}/api/system/inputs
-echo " DONE"
-
 echo "Restart OpenNMS Horizon                            ... "
 docker-compose stop opennms && docker-compose up -d
 

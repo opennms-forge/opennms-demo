@@ -1,7 +1,6 @@
 {
-    "Name": "OpenNMS FM",
-    "Type": "opennms-helm-fm-ds",
-    "typeLogoUrl": "public/plugins/opennms-helm-fm-ds/img/fm-ds.svg",
+    "Name": "OpenNMS Flow",
+    "Type": "opennms-helm-flow-datasource",
     "Access": "proxy",
     "url": "http://opennms:8980/opennms",
     "password": "",
@@ -10,6 +9,6 @@
     "basicAuth": true,
     "basicAuthUser": "admin",
     "basicAuthPassword": "admin",
-    "isDefault": true,
+    "isDefault": false,
     "jsonData": {}
 }

@@ -1,6 +1,6 @@
 {
-    "Name": "OpenNMS PM",
-    "Type": "opennms-helm-performance-datasource",
+    "Name": "OpenNMS Entities",
+    "Type": "opennms-helm-entity-datasource",
     "Access": "proxy",
     "url": "http://opennms:8980/opennms",
     "password": "",
@@ -9,6 +9,6 @@
     "basicAuth": true,
     "basicAuthUser": "admin",
     "basicAuthPassword": "admin",
-    "isDefault": false,
+    "isDefault": true,
     "jsonData": {}
 }

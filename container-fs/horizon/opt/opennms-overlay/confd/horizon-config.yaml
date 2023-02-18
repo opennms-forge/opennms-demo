@@ -1,0 +1,21 @@
+---
+postgres:
+  host: database
+  port: 5432
+  user: postgres
+  password: postgres
+
+opennms:
+  dbname: opennms
+  dbuser: opennms
+  dbpass: opennms
+
+  timeseries:
+    strategy: rrd
+
+  rrd:
+    storebyforeignsource: true
+    strategyclass: org.opennms.netmgt.rrd.rrdtool.MultithreadedJniRrdStrategy
+
+  library:
+    jrrd2: /usr/lib64/libjrrd2.so

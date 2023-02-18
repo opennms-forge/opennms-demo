@@ -1,0 +1,47 @@
+apiVersion: 1
+
+datasources:
+  - name: opennms
+    type: opennms-helm-performance-datasource
+    access: proxy
+    database: ""
+    orgId: 1
+    url: http://horizon:8980/opennms/
+    isDefault: true
+    basicAuth: true
+    basicAuthUser: admin
+    secureJsonData:
+      basicAuthPassword: admin
+  - name: opennms-flows
+    type: opennms-helm-flow-datasource
+    access: proxy
+    database: ""
+    orgId: 1
+    url: http://horizon:8980/opennms/
+    basicAuth: true
+    basicAuthUser: admin
+    secureJsonData:
+      basicAuthPassword: admin
+  - name: opennms-entity
+    type: opennms-helm-entity-datasource
+    access: proxy
+    database: ""
+    orgId: 1
+    url: http://horizon:8980/opennms/
+    basicAuth: true
+    basicAuthUser: admin
+    secureJsonData:
+      basicAuthPassword: admin
+  - name: postgres
+    type: postgres
+    access: proxy
+    database: opennms
+    url: database:5432
+    user: postgres
+    secureJsonData:
+      password: postgres
+    jsonData:
+      postgresVersion: 1200
+      sslmode: disable
+      tlsAuth: false
+      tlsSkipVerify: true

@@ -1,0 +1,6 @@
+apiVersion: 1
+
+apps:
+  - type: opennms-helm-app
+    org_id: 1
+    enabled: true

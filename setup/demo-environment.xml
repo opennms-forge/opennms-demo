@@ -8,8 +8,11 @@
     <asset name="latitude" value="48.8258763"/>
   </node>
 
-  <node location="Default" foreign-id="opennms" node-label="opennms">
-    <interface ip-addr="172.30.0.11" status="1" snmp-primary="P">
+  <node location="Default" foreign-id="horizon" node-label="horizon">
+    <interface ip-addr="127.0.0.1" status="1" snmp-primary="P">
+      <monitored-service service-name="OpenNMS-JVM"/>
+    </interface>
+    <interface ip-addr="172.30.0.11" status="1" snmp-primary="S">
       <monitored-service service-name="ICMP"/>
     </interface>
     <asset name="longitude" value="9.1685303"/>
@@ -17,7 +20,7 @@
   </node>
 
   <node location="Default" foreign-id="grafana" node-label="grafana">
-    <interface ip-addr="172.30.0.12" status="1" snmp-primary="P">
+    <interface ip-addr="172.30.0.13" status="1" snmp-primary="P">
       <monitored-service service-name="ICMP"/>
     </interface>
     <asset name="longitude" value="9.1685303"/>

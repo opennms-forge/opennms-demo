@@ -6,6 +6,14 @@ OPENNMS_PORT=8980
 
 # set -x
 
+echo -n "Install TimescaleDB extension                      "
+  sleep 5
+  docker-compose exec -u root horizon ./bin/install --do-database --timescaledb --skip-upgrade-tools 2&>1 /dev/null
+echo "    DONE"
+
+echo -n "Restart Horizon container                          "
+  docker-compose restart horizon
+echo "    DONE"
 echo -n "Ensure the ReST API is running before setup        "
 until $(curl -L --output /dev/null --silent --head --fail http://${OPENNMS_HOST}:8980); do
     printf '.'

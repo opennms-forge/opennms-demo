@@ -20,7 +20,7 @@ networks:
           - subnet: 172.31.0.0/16
 services:
   database:
-    image: ${DOCKER_REGISTRY:-docker.io}/postgres:${POSTGRES_VERSION:-15}
+    image: ${DOCKER_REGISTRY:-docker.io}/timescale/timescaledb:${TIMESCALE_VERSION:-latest-pg15}
     environment:
       TZ: Europe/Berlin
       POSTGRES_HOST: database
@@ -56,7 +56,7 @@ services:
       - '162:10162/udp'
 
   grafana:
-    image: docker.io/grafana/grafana:8.5.20
+    image: docker.io/grafana/grafana:8.5.21
     hostname: grafana
     depends_on:
       - horizon

@@ -4,10 +4,6 @@ OPENNMS_USER=admin
 OPENNMS_PASS=admin
 OPENNMS_PORT=8980
 
-GRAYLOG_HOST=localhost
-GRAYLOG_USER=admin
-GRAYLOG_PASS=admin
-GRAYLOG_PORT=9000
 # set -x
 
 echo -n "Ensure the ReST API is running before setup        "

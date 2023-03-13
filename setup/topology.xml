@@ -30,10 +30,10 @@
             <data key="foreignID">database</data>
             <data key="iconKey">database</data>
         </node>
-        <node id="opennms">
+        <node id="horizon">
             <data key="foreignSource">demo-environment</data>
-            <data key="label">opennms</data>
-            <data key="foreignID">opennms</data>
+            <data key="label">horizon</data>
+            <data key="foreignID">horizon</data>
             <data key="iconKey">opennms_server</data>
         </node>
         <node id="grafana">
@@ -59,7 +59,7 @@
             <data key="foreignID">web-stuttgart-01</data>
             <data key="iconKey">server</data>
         </node>
-        <edge id="opennms-net-stuttgart" source="opennms" target="net-stuttgart"/>
+        <edge id="opennms-net-stuttgart" source="horizon" target="net-stuttgart"/>
         <edge id="grafana-net-stuttgart" source="grafana" target="net-stuttgart"/>
         <edge id="database-net-stuttgart" source="database" target="net-stuttgart"/>
         <edge id="srv-stuttgart-01-net-stuttgart" source="srv-stuttgart-01" target="net-stuttgart"/>

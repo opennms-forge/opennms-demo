@@ -1,0 +1,246 @@
+{
+  "id": 2,
+  "gridPos": {
+    "h": 9,
+    "w": 24,
+    "x": 0,
+    "y": 0
+  },
+  "type": "opennms-helm-alarm-table-panel",
+  "title": "Alarms",
+  "datasource": {
+    "type": "opennms-helm-entity-datasource",
+    "uid": "P506178D7A6C7B590"
+  },
+  "columns": [
+    {
+      "$$hashKey": "object:324",
+      "hidden": false,
+      "sort": false,
+      "style": {
+        "alias": "Ack",
+        "align": "center",
+        "clip": true,
+        "pattern": "Is Acknowledged",
+        "type": "checkbox",
+        "width": "2em"
+      },
+      "text": "Is Acknowledged",
+      "title": "Ack"
+    },
+    {
+      "$$hashKey": "object:325",
+      "hidden": false,
+      "sort": false,
+      "style": {
+        "align": "center",
+        "clip": true,
+        "displayAs": "icon",
+        "pattern": "Severity",
+        "type": "severity",
+        "width": "3em"
+      },
+      "text": "Severity",
+      "title": "Severity"
+    },
+    {
+      "$$hashKey": "object:326",
+      "hidden": false,
+      "sort": false,
+      "style": {
+        "align": "right",
+        "colors": [
+          "rgba(245, 54, 54, 0.9)",
+          "rgba(237, 129, 40, 0.89)",
+          "rgba(50, 172, 45, 0.97)"
+        ],
+        "decimals": 0,
+        "pattern": "/Count/",
+        "type": "number",
+        "unit": "short",
+        "width": "3em",
+        "colorMode": null
+      },
+      "text": "Count",
+      "title": "Count"
+    },
+    {
+      "$$hashKey": "object:327",
+      "desc": true,
+      "hidden": false,
+      "sort": true,
+      "style": {
+        "alias": "Last Occurrence",
+        "align": "center",
+        "clip": true,
+        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+        "pattern": "/Last Event Time/",
+        "type": "date",
+        "width": "5em"
+      },
+      "text": "Last Event Time",
+      "title": "Last Occurrence"
+    },
+    {
+      "$$hashKey": "object:328",
+      "hidden": false,
+      "sort": false,
+      "style": {
+        "align": "left",
+        "clip": true,
+        "pattern": "Location",
+        "type": "string",
+        "width": "5em"
+      },
+      "text": "Location",
+      "title": "Location"
+    },
+    {
+      "$$hashKey": "object:329",
+      "hidden": false,
+      "sort": false,
+      "style": {
+        "alias": "Node",
+        "align": "left",
+        "pattern": "Node Label",
+        "type": "string",
+        "width": "12em"
+      },
+      "text": "Node Label",
+      "title": "Node"
+    },
+    {
+      "$$hashKey": "object:330",
+      "hidden": false,
+      "sort": false,
+      "style": {
+        "alias": "Message",
+        "align": "left",
+        "clip": true,
+        "pattern": "Log Message",
+        "sanitize": true,
+        "type": "string",
+        "width": "30em"
+      },
+      "text": "Log Message",
+      "title": "Message"
+    }
+  ],
+  "fontSize": "100%",
+  "pageSize": 10,
+  "pagingPausesRefresh": false,
+  "scroll": false,
+  "severity": "column",
+  "showHeader": true,
+  "sort": {
+    "col": 3,
+    "desc": true
+  },
+  "styles": [
+    {
+      "align": "center",
+      "clip": true,
+      "displayAs": "icon",
+      "pattern": "Severity",
+      "type": "severity",
+      "width": "3em"
+    },
+    {
+      "alias": "Last Occurrence",
+      "align": "center",
+      "clip": true,
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "pattern": "/Last Event Time/",
+      "type": "date",
+      "width": "5em"
+    },
+    {
+      "align": "center",
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "pattern": "/(.*Time|Suppressed Until)/",
+      "type": "date",
+      "width": "6em"
+    },
+    {
+      "pattern": "/.*ID/",
+      "type": "string"
+    },
+    {
+      "pattern": "Description",
+      "sanitize": true,
+      "type": "string"
+    },
+    {
+      "alias": "Message",
+      "align": "left",
+      "clip": true,
+      "pattern": "Log Message",
+      "sanitize": true,
+      "type": "string",
+      "width": "30em"
+    },
+    {
+      "align": "right",
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "decimals": 0,
+      "pattern": "/Count/",
+      "type": "number",
+      "unit": "short",
+      "width": "3em",
+      "colorMode": null
+    },
+    {
+      "alias": "Node",
+      "align": "left",
+      "pattern": "Node Label",
+      "type": "string",
+      "width": "12em"
+    },
+    {
+      "alias": "Ack",
+      "align": "center",
+      "clip": true,
+      "pattern": "Is Acknowledged",
+      "type": "checkbox",
+      "width": "2em"
+    },
+    {
+      "align": "left",
+      "clip": true,
+      "pattern": "Location",
+      "type": "string",
+      "width": "5em"
+    },
+    {
+      "pattern": "/.*/",
+      "type": "string"
+    }
+  ],
+  "targets": [
+    {
+      "datasource": {
+        "type": "opennms-helm-entity-datasource",
+        "uid": "P506178D7A6C7B590"
+      },
+      "entityType": {
+        "id": "alarm",
+        "label": "Alarms",
+        "queryFunction": "alarms"
+      },
+      "filter": {
+        "clauses": [],
+        "limit": 1000,
+        "orderBy": []
+      },
+      "limit": 0,
+      "orderBy": [],
+      "refId": "A"
+    }
+  ],
+  "theme": "helm",
+  "transform": "table"
+}

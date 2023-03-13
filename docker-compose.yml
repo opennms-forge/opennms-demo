@@ -1,9 +1,11 @@
 ---
-version: '2.3'
+version: '3'
 
 volumes:
   data-postgres: {}
-  data-opennms-share: {}
+  data-opennms: {}
+  data-opennms-cfg: {}
+  data-grafana: {}
 
 networks:
   net.stuttgart:
@@ -18,138 +20,126 @@ networks:
           - subnet: 172.31.0.0/16
 services:
   database:
-    image: postgres:12
-    container_name: demo-database
-    env_file:
-      - .postgres.env
+    image: ${DOCKER_REGISTRY:-docker.io}/postgres:${POSTGRES_VERSION:-15}
     environment:
-      - TZ=Europe/Berlin
-    ports:
-      - "5432:5432"
+      TZ: Europe/Berlin
+      POSTGRES_HOST: database
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     volumes:
       - data-postgres:/var/lib/postgresql/data
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.10
 
-  opennms:
-    image: opennms/horizon:26.2.2
-    container_name: demo-horizon-core-web
-    cap_add:
-      - NET_ADMIN
+  horizon:
+    image: ${DOCKER_REGISTRY:-docker.io}/${DOCKER_ORG:-opennms}/${HORIZON_OCI:-horizon}:${ONMS_VERSION:-latest}
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.11
-    env_file:
-      - .opennms.env
-      - .postgres.env
     environment:
       - TZ=Europe/Berlin
     depends_on:
       - database
     volumes:
-      - ./etc:/opt/opennms/etc
-      - data-opennms-share:/data-opennms-share
-      - ./etc-overlay:/opt/opennms-etc-overlay
+      - data-opennms:/opennms-data
+      - data-opennms-cfg:/opt/opennms/etc
+      - ./container-fs/horizon/opt/opennms/deploy:/opt/opennms/deploy
+      - ./container-fs/horizon/opt/opennms-overlay:/opt/opennms-overlay
+      - ./container-fs/horizon/etc/conf.d/confd.toml:/etc/confd/confd.toml
     command: ["-s"]
     ports:
-      - "8980:8980"
-      - "8101:8101"
-      - "61616:61616"
-      - "162:162/udp"
+      - '8980:8980'
+      - '8101:8101'
+      - '61616:61616/tcp'
+      - '162:10162/udp'
 
   grafana:
-    image: opennms/helm:latest
-    container_name: demo-grafana
+    image: docker.io/grafana/grafana:8.5.20
+    hostname: grafana
+    depends_on:
+      - horizon
     networks:
       net.stuttgart:
-        ipv4_address: 172.30.0.9
+        ipv4_address: 172.30.0.13
     environment:
-      - TZ=Europe/Berlin
-    env_file:
-      - .grafana.env
+      - TZ=${TIMEZONE:-America/New_York}
+      - GF_INSTALL_PLUGINS=https://github.com/OpenNMS/opennms-helm/releases/download/v8.0.4/opennms-helm-app-8.0.4.zip;opennms-helm-app,grafana-piechart-panel,neocat-cal-heatmap-panel,briangann-datatable-panel
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+    volumes:
+      - data-grafana:/var/lib/grafana
+      - ./container-fs/grafana:/etc/grafana/provisioning/
     ports:
-      - "3000:3000"
+      - "3000:3000/tcp"
 
   minion-fulda-01:
-    image: opennms/minion:26.2.1
-    container_name: demo-fd-minion-01
+    image: ${DOCKER_REGISTRY:-docker.io}/${DOCKER_ORG:-opennms}/${MINION_OCI:-minion}:${ONMS_VERSION:-latest}
+    environment:
+      TZ: ${TIMEZONE:-America/New_York}
+      JAVA_MIN_MEM: 512M
+      JAVA_MAX_MEM: 2048M
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.12
       net.fulda:
         ipv4_address: 172.31.0.12
-    env_file:
-      - .minion-fulda-01.env
+    volumes:
+      - ./container-fs/minion/opt/minion/minion-config.yaml:/opt/minion/minion-config.yaml
     command: ["-f"]
+    healthcheck:
+      test: "/health.sh"
+      interval: 30s
+      timeout: 20s
+      retries: 3
     ports:
-      - "8201:8201"
-      - "18980"
-      - "162/udp"
-      - "514/udp"
+      - "8201:8201/tcp"
 
   srv-stuttgart-01:
-    image: indigo/docker-netsnmp
-    container_name: demo-str-srv-01
+    image: quay.io/labmonkeys/net-snmp:5.9.3-r0.b1425
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.32
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
 
   srv-stuttgart-02:
-    image: indigo/docker-netsnmp
-    container_name: demo-str-srv-02
+    image: quay.io/labmonkeys/net-snmp:5.9.3-r0.b1425
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.33
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
 
   web-stuttgart-01:
     image: httpd
-    container_name: demo-str-web-01
     networks:
       net.stuttgart:
         ipv4_address: 172.30.0.34
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "80"
 
   srv-fulda-01:
-    image: indigo/docker-netsnmp
-    container_name: demo-fd-srv-01
+    image: quay.io/labmonkeys/net-snmp:5.9.3-r0.b1425
     networks:
       net.fulda:
         ipv4_address: 172.31.0.32
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
 
   srv-fulda-02:
-    image: indigo/docker-netsnmp
-    container_name: demo-fd-srv-02
+    image: quay.io/labmonkeys/net-snmp:5.9.3-r0.b1425
     networks:
       net.fulda:
         ipv4_address: 172.31.0.33
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "161/udp"
-
   web-fulda-01:
     image: httpd
-    container_name: demo-fd-web-01
     networks:
       net.fulda:
         ipv4_address: 172.31.0.34
     environment:
       - TZ=Europe/Berlin
-    ports:
-      - "80"

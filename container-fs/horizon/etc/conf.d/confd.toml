@@ -1,0 +1,4 @@
+confdir = "/etc/confd"
+backend = "file"
+file = [ "/opt/opennms-overlay/confd/horizon-config.yaml" ]
+log-level = "info"
